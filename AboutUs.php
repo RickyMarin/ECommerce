@@ -15,7 +15,7 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-			<?php include("header.php"); ?>  
+            <?php include("header.php"); ?>  
 				<!--<header id="header">
 					<h1><a href="index.html">Talk2Me</a> </h1>
 					<nav id="nav">
