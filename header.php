@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
-		<header id="header" class="alt">
+		<header id="header">
 			<h1><a href="index.php">TalkToMe</a></h1>
 			<nav id="nav">
 				<ul>
