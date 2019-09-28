@@ -36,13 +36,13 @@
 					</nav>
 				</header>-->
 
-			<!-- Banner -->
+<!-- Banner -->
 				<section id="banner">
 					<h2>Talk2Me</h2>
 					<p>The fun and easy way to talk to the celebrities you love!</p>
 					<ul class="actions special">
-						<li><a href="#" class="button primary">Sign Up</a></li>
-						<li><a href="#" class="button">Learn More</a></li>
+						<li><a href="SignUp.php" class="button primary">Sign Up</a></li>
+						<li><a href="AboutUs.php" class="button">Learn More</a></li>
 					</ul>
 				</section>
 
@@ -51,43 +51,45 @@
 
 					<section class="box special">
 						<header class="major">
-							<h2>Introducing the ultimate mobile app
+							<h2>Introducing a new way
 							<br />
-							for doing stuff with your phone</h2>
-							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
-							adipiscing nunc adipiscing. Condimentum turpis massa.</p>
+							to connect with your favorite celebrities</h2>
+							<p>Talk2Me facilitates video calls between celebrities and fans, providing them with a meaningful interaction
+								that can't be found in a typical meet-and-greet experience.</p>
 						</header>
-						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+						<!--<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>-->
 					</section>
 
 					<section class="box special features">
 						<div class="features-row">
 							<section>
-								<span class="icon solid major fa-bolt accent2"></span>
-								<h3>Magna etiam</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<span class="icon solid major fa-video accent2"></span>
+								<h3>Face to Face</h3>
+								<p>Talk2Me video calls facilitate an intimate environment allowing you to get to know your favorite celebrities. </p>
 							</section>
 							<section>
-								<span class="icon solid major fa-chart-area accent3"></span>
-								<h3>Ipsum dolor</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<span class="icon solid major fa-users accent3"></span>
+								<h3>Celebrities</h3>
+								<p>Browse through our sizable list of actors, singers, social media influencers, entrepreneurs, and so many more!</p>
 							</section>
 						</div>
 						<div class="features-row">
 							<section>
-								<span class="icon solid major fa-cloud accent4"></span>
-								<h3>Sed feugiat</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<span class="icon solid major fa-eye accent4"></span>
+								<h3>Look Back</h3>
+								<p>Video calls can be saved so you can go back and cherish the meaningful experiences you had.</p>
 							</section>
 							<section>
 								<span class="icon solid major fa-lock accent5"></span>
-								<h3>Enim phasellus</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<h3>Privacy</h3>
+								<p>Video calls are conducted through the generation of a one-time use link, avoiding the exchange of
+										personal information and protecting the privacy of both the fan and the celebrity.</p>
 							</section>
 						</div>
 					</section>
 
-					<div class="row">
+					<!-- not sure if we need section below -->
+					<!-- <div class="row">
 						<div class="col-6 col-12-narrower">
 
 							<section class="box special">
@@ -112,32 +114,14 @@
 							</section>
 
 						</div>
-					</div>
-
-				</section>
-
-			<!-- CTA -->
-				<section id="cta">
-
-					<h2>Sign up for beta access</h2>
-					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
-
-					<form>
-						<div class="row gtr-50 gtr-uniform">
-							<div class="col-8 col-12-mobilep">
-								<input type="email" name="email" id="email" placeholder="Email Address" />
-							</div>
-							<div class="col-4 col-12-mobilep">
-								<input type="submit" value="Sign Up" class="fit" />
-							</div>
-						</div>
-					</form>
+					</div> -->
 
 				</section>
 
 			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
+			<?php include("footer.php"); ?>  
+				<!--<footer id="footer">
+				<!--	<ul class="icons">
 						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -146,9 +130,9 @@
 						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2019 Talk2Me. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
-				</footer>
+				</footer>-->
 
 		</div>
 
