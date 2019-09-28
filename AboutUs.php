@@ -15,16 +15,23 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-			<?php include("header.php"); ?>  
+            <?php include("header.php"); ?>  
 				<!--<header id="header">
 					<h1><a href="index.html">Talk2Me</a> </h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="AboutUs.html">About Us</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<li><a href="SignUp.html">Sign Up</a></li>
-							<li><a href="Login.html">Login</a></li>
+							<li>
+								<a href="#" class="icon solid fa-angle-down">Browse</a>
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="AboutUs.html">About Us</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="SignUp.html">Sign Up</a></li>
+									<li><a href="Login.html">Login</a></li>
+								</ul>
+							</li>
+							<li><a href="#" class="button">Sign Up</a></li>
 						</ul>
 					</nav>
 				</header>-->
@@ -58,7 +65,8 @@
 						</div>
 					</div>
 					<div style="text-align: center;">
-						<a href="SignUp.html" class="button">Sign Up Now</a>
+						<a href="#" class="button">Purchase</a>
+						<a href="#" class="button">Sign Up Now</a>
 					</div>
 				</section>
 
