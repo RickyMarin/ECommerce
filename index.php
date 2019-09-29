@@ -6,6 +6,7 @@
 -->
 <html>
 	<head>
+        <link rel="icon" href="images/favicon.ico" type="image/ico">
 		<title>Talk2Me</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -39,7 +40,7 @@
 <!-- Banner -->
 				<section id="banner">
 					<h2>Talk2Me</h2>
-					<p>The fun and easy way to talk to the celebrities you love!</p>
+					<p>When you want some famous attention</p>
 					<ul class="actions special">
 						<li><a href="SignUp.php" class="button primary">Sign Up</a></li>
 						<li><a href="AboutUs.php" class="button">Learn More</a></li>
