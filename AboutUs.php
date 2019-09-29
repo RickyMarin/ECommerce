@@ -65,7 +65,6 @@
 						</div>
 					</div>
 					<div style="text-align: center;">
-						<a href="#" class="button">Purchase</a>
 						<a href="SignUp.php" class="button">Sign Up Now</a>
 					</div>
 				</section>
