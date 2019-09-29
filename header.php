@@ -16,12 +16,12 @@
 						<ul>-->
 					<li><a href="index.php">Home</a></li>
 					<li><a href="AboutUs.php">About Us</a></li>
-					<li><a href="SignUp.php">Sign Up</a></li>
+					<li><a href="contact.php">Contact Us</a></li>
 					<li><a href="Login.php">Login</a></li>
 							<!--<li><a href="contact.html">Contact</a></li>-->
 					<!--	</ul>-->
 					<!--</li>-->
-					<li><a href="#" class="button">Sign Up</a></li>
+					<li><a href="SignUp.php" class="button">Sign Up</a></li>
 				</ul>
 			</nav>
 		</header>
