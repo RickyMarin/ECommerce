@@ -166,7 +166,8 @@
 ?>
 
 <?php
-    $dbconn = pg_connect("dbname=siteUsers");
+    $dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com
+ port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
     $query = "INSERT INTO siteUsers VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
     $result = pg_querty($query);
     if(!result){
