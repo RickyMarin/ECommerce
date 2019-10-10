@@ -32,84 +32,84 @@
                     <input type="text" name="name" id="name" value="" placeholder="Name" />
                 </div>
                 <div class="col-6 col-12-mobilep">
-                    <input type="email" name="email" id="email" value="" placeholder="Email" />
+                    <input type="text" name="email" id="email" value="" placeholder="Email" />
                 </div>
                 <div class="col-12">
-                    <textarea name="Username" id="Username" placeholder="Enter a username" rows="1"></textarea>
+                    <input type = "text" id="Username" placeholder="Enter a username" rows="1"/>
                 </div>
                 <div class="col-12">
-                    <textarea name="Password" id="Password" placeholder="Enter a password" rows="1"></textarea>
+                    <input type = "text" id="Password" placeholder="Enter a password" rows="1"/>
                 </div>
                 <div class="col-12">
-                    <textarea name="Address" id="Address" placeholder="Address" rows="1"></textarea>
+                    <input type="text" id="Address" placeholder="Address" rows="1"/>
                 </div>
                 <div class="col-4">
-                    <textarea name="City" id="City" placeholder="City" rows="1"></textarea>
+                    <input type = "text" id="City" placeholder="City" rows="1"/>
                 </div>
                 <div class="col-4">
-                    <textarea name="ZipCode" id="ZipCode" placeholder="Zip Code" rows="1"></textarea>
+                    <input type="text" id="ZipCode" placeholder="Zip Code" rows="1"/>
                 </div>
-                <div class="col-4">
-                    <select>
-                        <option value="" disabled selected>State</option>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="DC">District Of Columbia</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="ID">Idaho</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="ME">Maine</option>
-                        <option value="MD">Maryland</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MO">Missouri</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NV">Nevada</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="NY">New York</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="OH">Ohio</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="OR">Oregon</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="TX">Texas</option>
-                        <option value="UT">Utah</option>
-                        <option value="VT">Vermont</option>
-                        <option value="VA">Virginia</option>
-                        <option value="WA">Washington</option>
-                        <option value="WV">West Virginia</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="WY">Wyoming</option>
-                    </select>
+<!--                <div class="col-4">-->
+<!--                    <select>-->
+<!--                        <option value="" disabled selected>State</option>-->
+<!--                        <option value="AL">Alabama</option>-->
+<!--                        <option value="AK">Alaska</option>-->
+<!--                        <option value="AZ">Arizona</option>-->
+<!--                        <option value="AR">Arkansas</option>-->
+<!--                        <option value="CA">California</option>-->
+<!--                        <option value="CO">Colorado</option>-->
+<!--                        <option value="CT">Connecticut</option>-->
+<!--                        <option value="DE">Delaware</option>-->
+<!--                        <option value="DC">District Of Columbia</option>-->
+<!--                        <option value="FL">Florida</option>-->
+<!--                        <option value="GA">Georgia</option>-->
+<!--                        <option value="HI">Hawaii</option>-->
+<!--                        <option value="ID">Idaho</option>-->
+<!--                        <option value="IL">Illinois</option>-->
+<!--                        <option value="IN">Indiana</option>-->
+<!--                        <option value="IA">Iowa</option>-->
+<!--                        <option value="KS">Kansas</option>-->
+<!--                        <option value="KY">Kentucky</option>-->
+<!--                        <option value="LA">Louisiana</option>-->
+<!--                        <option value="ME">Maine</option>-->
+<!--                        <option value="MD">Maryland</option>-->
+<!--                        <option value="MA">Massachusetts</option>-->
+<!--                        <option value="MI">Michigan</option>-->
+<!--                        <option value="MN">Minnesota</option>-->
+<!--                        <option value="MS">Mississippi</option>-->
+<!--                        <option value="MO">Missouri</option>-->
+<!--                        <option value="MT">Montana</option>-->
+<!--                        <option value="NE">Nebraska</option>-->
+<!--                        <option value="NV">Nevada</option>-->
+<!--                        <option value="NH">New Hampshire</option>-->
+<!--                        <option value="NJ">New Jersey</option>-->
+<!--                        <option value="NM">New Mexico</option>-->
+<!--                        <option value="NY">New York</option>-->
+<!--                        <option value="NC">North Carolina</option>-->
+<!--                        <option value="ND">North Dakota</option>-->
+<!--                        <option value="OH">Ohio</option>-->
+<!--                        <option value="OK">Oklahoma</option>-->
+<!--                        <option value="OR">Oregon</option>-->
+<!--                        <option value="PA">Pennsylvania</option>-->
+<!--                        <option value="RI">Rhode Island</option>-->
+<!--                        <option value="SC">South Carolina</option>-->
+<!--                        <option value="SD">South Dakota</option>-->
+<!--                        <option value="TN">Tennessee</option>-->
+<!--                        <option value="TX">Texas</option>-->
+<!--                        <option value="UT">Utah</option>-->
+<!--                        <option value="VT">Vermont</option>-->
+<!--                        <option value="VA">Virginia</option>-->
+<!--                        <option value="WA">Washington</option>-->
+<!--                        <option value="WV">West Virginia</option>-->
+<!--                        <option value="WI">Wisconsin</option>-->
+<!--                        <option value="WY">Wyoming</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+                <div class="col-6 col-12-mobilep">
+                    <input type="text" id="Age" placeholder="Enter your age 18+" rows="1"/>
                 </div>
                 <div class="col-6 col-12-mobilep">
-                    <textarea name="Age" id="Age" placeholder="Enter your age 18+" rows="1"></textarea>
-                </div>
-                <div class="col-6 col-12-mobilep">
-                    <textarea name="FavoriteCelebrity" id="FavoriteCelebrity" placeholder="Enter your favorite celebrity" rows="1"></textarea>
+                    <input type="text" id="FavoriteCelebrity" placeholder="Enter your favorite celebrity" rows="1"/>
                 </div>
                 <div class="col-12">
                     <ul class="actions special">
