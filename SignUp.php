@@ -184,7 +184,9 @@
         echo "Connection failure";
     }
     //echo $query;
-    $query = "INSERT INTO siteUsers(email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES('test','test','1','VA','123 Main','11111','Jessica Alba')";
+        $query = "INSERT INTO siteUsers VALUES('test','test','1','VA','123 Main','11111','Jessica Alba')";
+
+        //$query = "INSERT INTO siteUsers(email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES('test','test','1','VA','123 Main','11111','Jessica Alba')";
 //'$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
     $result = pg_query($dbconn,$query);
     if(!$result){
