@@ -34,20 +34,20 @@
                 <div class="col-6 col-12-mobilep">
                     <input type="text" name="email" id="email" value="" placeholder="Email" />
                 </div>
-                <div class="col-12">
-                    <input type = "text" id="Username" placeholder="Enter a username" rows="1"/>
+                <div class="col-6 col-12-mobilep">
+                    <input type="text" name ="Username" id="Username" value="" placeholder="Enter a username"/>
                 </div>
                 <div class="col-12">
-                    <input type = "text" id="Password" placeholder="Enter a password" rows="1"/>
+                    <input type = "text" name = "Password" id="Password" placeholder="Enter a password"/>
                 </div>
                 <div class="col-12">
-                    <input type="text" id="Address" placeholder="Address" rows="1"/>
+                    <input type="text"  name = "Address" id="Address" placeholder="Address"/>
                 </div>
                 <div class="col-4">
-                    <input type = "text" id="City" placeholder="City" rows="1"/>
+                    <input type = "text" name = "City" id="City" placeholder="City"/>
                 </div>
                 <div class="col-4">
-                    <input type="text" id="ZipCode" placeholder="Zip Code" rows="1"/>
+                    <input type="text" name = "ZipCode" id="ZipCode" placeholder="Zip Code"/>
                 </div>
 <!--                <div class="col-4">-->
 <!--                    <select>-->
@@ -106,10 +106,10 @@
 <!--                    </select>-->
 <!--                </div>-->
                 <div class="col-6 col-12-mobilep">
-                    <input type="text" id="Age" placeholder="Enter your age 18+" rows="1"/>
+                    <input type="text" id="Age" placeholder="Enter your age 18+"/>
                 </div>
                 <div class="col-6 col-12-mobilep">
-                    <input type="text" id="FavoriteCelebrity" placeholder="Enter your favorite celebrity" rows="1"/>
+                    <input type="text" id="FavoriteCelebrity" placeholder="Enter your favorite celebrity"/>
                 </div>
                 <div class="col-12">
                     <ul class="actions special">

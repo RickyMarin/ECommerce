@@ -2,8 +2,9 @@
 //$UsernameError = $emailMessage = $genderErr = $AgeMessage = "";
 //$Username = $email = $ZipMessage = $comment =  $hashedPassword = "";
 //$age= $ZipCode = 0;
-
-$password = $_POST['password'];
+//echo $_POST["Username"];
+//var_dump($GLOBALS);
+$password = $_POST['Password'];
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -58,6 +59,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Connection failure";
     }
     //echo $query;
+    //echo $_POST['name'];
+    //echo $_POST[email];
+     //echo $_POST[Username];
+     // echo $_POST[Address];
+     // echo $_POST[City];
+      // echo $_POST[FavoriteCelebrity] ;
+    // echo  $hashedPassword;
+    //echo $_POST[Age];
     $query = "INSERT INTO siteUsers VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Address]', '$_POST[City]', '$_POST[FavoriteCelebrity]', '$hashedPassword', '$_POST[Age]', '$_POST[ZipCode]')";
     $result = pg_query($dbconn,$query);
     if(!$result){
