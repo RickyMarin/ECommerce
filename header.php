@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<header id="header">
-			<h1><a href="index.php">TalkToMe</a></h1>
+			<h1><a href="index.php">Talk2Me</a></h1>
 			<nav id="nav">
 				<ul>
 					<!--<li>-->
