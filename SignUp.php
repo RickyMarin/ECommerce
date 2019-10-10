@@ -189,7 +189,7 @@
     }
     echo $query;
     $query = "INSERT INTO siteUsers (name, email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
-    $result = pg_query($dbconn, $query);
+    $result = pg_query($query);
     if(!$result){
         echo "Sign up failed. Please try again!";
     }
