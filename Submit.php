@@ -6,7 +6,7 @@ $age= $ZipCode = 0;
 $password = $_POST['password'];
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-//if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //    if (empty($_POST["Username"])) {
 //        $UsernameError = "Enter your name";
 //    } else {
