@@ -1,7 +1,11 @@
 <?php
 $UsernameError = $emailMessage = $genderErr = $AgeMessage = "";
-$Username = $email = $ZipMessage = $comment =  "";
+$Username = $email = $ZipMessage = $comment =  $hashedPassword = "";
 $age= $ZipCode = 0;
+
+$password = $_POST['password'];
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["Username"])) {
         $UsernameError = "Enter your name";
@@ -58,8 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Connection failure";
     }
     //echo $query;
-    $query = "INSERT INTO siteUsers(name, email, username, age, state, address, city, zipcode, favoriteCelebrity,hashedPassword) VALUES('test','test','test','1','VA','123 Main','11111','Jessica Alba','password')";
-//'$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
+    $query = "INSERT INTO siteUsers(name, email, username, age, state, address, city, zipcode, favoriteCelebrity,hashedPassword) VALUES('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]', '$hashedPassword')";
     $result = pg_query($dbconn,$query);
     if(!$result){
         echo "Sign up failed. Please try again!";
