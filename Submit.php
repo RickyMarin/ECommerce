@@ -1,7 +1,7 @@
 <?php
-$UsernameError = $emailMessage = $genderErr = $AgeMessage = "";
-$Username = $email = $ZipMessage = $comment =  $hashedPassword = "";
-$age= $ZipCode = 0;
+//$UsernameError = $emailMessage = $genderErr = $AgeMessage = "";
+//$Username = $email = $ZipMessage = $comment =  $hashedPassword = "";
+//$age= $ZipCode = 0;
 
 $password = $_POST['password'];
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
