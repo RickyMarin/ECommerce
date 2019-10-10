@@ -197,8 +197,20 @@
         //Age is fine
     }
     if (empty($_POST["Zip"])) {
-        $AgeMessage = "Enter a correct age";
-    }}
+        $ZipMessage = "Enter a correct Zip Code";
+    }
+    else{
+        $ZipCode = $_POST["Zip"];
+
+    }
+
+
+
+
+
+
+
+    }
     ?>
     <!-- Footer -->
 
