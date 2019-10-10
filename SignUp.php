@@ -171,10 +171,6 @@
     if (empty($_POST["ZipCode"])) {
         $AgeMessage = "Enter a correct age";
     }}
-?>
-
-
-<?php
     $dbuser = 'lkoloaarfawvjm';
     $dbpass = 'adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703';
     $host = 'ec2-174-129-218-200.compute-1.amazonaws.com';
@@ -187,8 +183,8 @@
     else{
         echo "Connection failure";
     }
-    echo $query;
-    $query = "INSERT INTO siteUsers(name, email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
+    //echo $query;
+    $query = "INSERT INTO siteUsers(name,email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
     $result = pg_query($query);
     if(!$result){
         echo "Sign up failed. Please try again!";
