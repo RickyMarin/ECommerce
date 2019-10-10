@@ -40,10 +40,16 @@
                 <div class="col-12">
                     <textarea name="Password" id="Password" placeholder="Enter a password" rows="1"></textarea>
                 </div>
-                <div class="col-6 col-12-mobilep">
-                    <textarea name="Age" id="Age" placeholder="Enter your age 18+" rows="1"></textarea>
+                <div class="col-12">
+                    <textarea name="Address" id="Address" placeholder="Address" rows="1"></textarea>
                 </div>
-                <div class="col-6 col-12-mobilep">
+                <div class="col-4">
+                    <textarea name="City" id="City" placeholder="City" rows="1"></textarea>
+                </div>
+                <div class="col-4">
+                    <textarea name="ZipCode" id="ZipCode" placeholder="Zip Code" rows="1"></textarea>
+                </div>
+                <div class="col-4">
                     <select>
                         <option value="" disabled selected>State</option>
                         <option value="AL">Alabama</option>
@@ -100,12 +106,9 @@
                     </select>
                 </div>
                 <div class="col-6 col-12-mobilep">
-                    <textarea name="City" id="City" placeholder="City" rows="1"></textarea>
+                    <textarea name="Age" id="Age" placeholder="Enter your age 18+" rows="1"></textarea>
                 </div>
                 <div class="col-6 col-12-mobilep">
-                    <textarea name="ZipCode" id="ZipCode" placeholder="Zip Code" rows="1"></textarea>
-                </div>
-                <div class="col-12">
                     <textarea name="Favorite Celebrity" id="Favorite Celebrity" placeholder="Enter your favorite celebrity" rows="1"></textarea>
                 </div>
                 <div class="col-12">
