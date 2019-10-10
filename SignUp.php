@@ -189,7 +189,7 @@
     }
     $query = "INSERT INTO siteUsers (name, email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
     $result = pg_querty($query);
-    if(!result){
+    if(!$result){
         echo "Sign up failed. Please try again!";
     }
     else{
