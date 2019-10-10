@@ -106,7 +106,7 @@
                                 <textarea name="City" id="City" placeholder="City" rows="1"></textarea>
                             </div>
                             <div class="col-6 col-12-mobilep">
-                                <textarea name="ZipCode" id="ZipCode" placeholder="ZipCode" rows="1"></textarea>
+                                <textarea name="ZipCode" id="ZipCode" placeholder="Zip Code" rows="1"></textarea>
                             </div>
 							<div class="col-12">
 								<textarea name="Favorite Celebrity" id="Favorite Celebrity" placeholder="Enter your favorite celebrity" rows="1"></textarea>
@@ -123,43 +123,6 @@
 			<!-- Footer -->
 			<?php include("footer.php"); ?>  
 
-
-    <section id="main" class="container medium">
-        <header>
-            <h2>Sign Up</h2>
-            <p>Sign up now to join all the action!</p>
-        </header>
-        <div class="box">
-            <form method="post" action="#">
-                <div class="row gtr-50 gtr-uniform">
-                    <div class="col-6 col-12-mobilep">
-                        <input type="text" name="name" id="name" value="" placeholder="Name"/>
-                    </div>
-                    <div class="col-6 col-12-mobilep">
-                        <input type="email" name="email" id="email" value="" placeholder="Email"/>
-                    </div>
-                    <div class="col-12">
-                        <textarea name="Age" id="Age" placeholder="Enter your age 18+" rows="1"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <textarea name="Username" id="Username" placeholder="Enter a username" rows="1"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <textarea name="Favorite Celebrity" id="Favorite Celebrity"
-                                  placeholder="Enter your favorite celebrity" rows="1"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <textarea name="Password" id="Password" placeholder="Enter a password" rows="1"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <ul class="actions special">
-                            <li><input type="submit" value="Sign Up!"/></li>
-                        </ul>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
     <?php
     $UsernameError = $emailMessage = $genderErr = $AgeMessage = "";
     $Username = $email = $ZipMessage = $comment =  "";
@@ -200,7 +163,6 @@
         $AgeMessage = "Enter a correct age";
     }}
     ?>
-    <!-- Footer -->
 
 
 
