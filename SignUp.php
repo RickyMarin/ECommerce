@@ -169,6 +169,12 @@
     $dbconn = pg_connect("dbname=siteUsers");
     $query = "INSERT INTO siteUsers VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
     $result = pg_querty($query);
+    if(!result){
+        echo "Sign up failed. Please try again!";
+    }
+    else{
+        echo "Sign up Success! Talk to your favorite celebrity now!";
+    }
 ?>
 
 </div>
