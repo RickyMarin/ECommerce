@@ -26,7 +26,7 @@
         <p>Sign up now to join all the action!</p>
     </header>
     <div class="box">
-        <form method="POST" action="signup.php">
+        <form method="POST" action="SignUp.php">
             <div class="row gtr-50 gtr-uniform">
                 <div class="col-6 col-12-mobilep">
                     <input type="text" name="name" id="name" value="" placeholder="Name" />
