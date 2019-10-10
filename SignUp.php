@@ -109,7 +109,7 @@
                     <textarea name="Age" id="Age" placeholder="Enter your age 18+" rows="1"></textarea>
                 </div>
                 <div class="col-6 col-12-mobilep">
-                    <textarea name="Favorite Celebrity" id="Favorite Celebrity" placeholder="Enter your favorite celebrity" rows="1"></textarea>
+                    <textarea name="FavoriteCelebrity" id="FavoriteCelebrity" placeholder="Enter your favorite celebrity" rows="1"></textarea>
                 </div>
                 <div class="col-12">
                     <ul class="actions special">
@@ -160,12 +160,16 @@
         }
         //Age is fine
     }
-    if (empty($_POST["Zip"])) {
+    if (empty($_POST["ZipCode"])) {
         $AgeMessage = "Enter a correct age";
     }}
 ?>
 
-
+<?php
+    $dbconn = pg_connect("dbname=siteUsers");
+    $query = "INSERT INTO siteUsers VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
+    $result = pg_querty($query);
+?>
 
 </div>
 
