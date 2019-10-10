@@ -170,7 +170,7 @@
 
     if (empty($_POST["ZipCode"])) {
         $AgeMessage = "Enter a correct age";
-    }}
+    }
     $dbuser = 'lkoloaarfawvjm';
     $dbpass = 'adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703';
     $host = 'ec2-174-129-218-200.compute-1.amazonaws.com';
@@ -184,7 +184,7 @@
         echo "Connection failure";
     }
     //echo $query;
-    $query = "INSERT INTO siteUsers(email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES('test','test','1','VA','123 Main','11111'.'Jessica Alba')";
+    $query = "INSERT INTO siteUsers(email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES('test','test','1','VA','123 Main','11111','Jessica Alba')";
 //'$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
     $result = pg_query($dbconn,$query);
     if(!$result){
@@ -192,7 +192,7 @@
     }
     else{
         echo "Sign up Success! Talk to your favorite celebrity now!";
-    }
+    }}
 ?>
 
 </div>
