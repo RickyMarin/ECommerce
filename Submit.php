@@ -50,7 +50,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //    if (empty($_POST["Age"])) {
 //        $AgeMessage = "Enter a correct age";
 //    }
-    
+    //echo $query;
+    echo $_POST['name'];
+    echo $_POST["email"];
+    echo $_POST["Username"];
+     echo $_POST["Address"];
+     echo $_POST["City"];
+     echo $_POST["FavoriteCelebrity"] ;
+     echo  $hashedPassword;
+    echo $_POST["Age"];
     $dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
     if($dbconn){
         echo "Connected!";
@@ -58,15 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else{
         echo "Connection failure";
     }
-    //echo $query;
-    //echo $_POST['name'];
-    //echo $_POST[email];
-     //echo $_POST[Username];
-     // echo $_POST[Address];
-     // echo $_POST[City];
-      // echo $_POST[FavoriteCelebrity] ;
-    // echo  $hashedPassword;
-    //echo $_POST[Age];
+
     $query = "INSERT INTO siteUsers VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Address]', '$_POST[City]', '$_POST[FavoriteCelebrity]', '$hashedPassword', '$_POST[Age]', '$_POST[ZipCode]')";
     $result = pg_query($dbconn,$query);
     if(!$result){

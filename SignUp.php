@@ -34,7 +34,7 @@
                 <div class="col-6 col-12-mobilep">
                     <input type="text" name="email" id="email" value="" placeholder="Email" />
                 </div>
-                <div class="col-6 col-12-mobilep">
+                <div class="col-12">
                     <input type="text" name ="Username" id="Username" value="" placeholder="Enter a username"/>
                 </div>
                 <div class="col-12">
@@ -48,6 +48,12 @@
                 </div>
                 <div class="col-4">
                     <input type="text" name = "ZipCode" id="ZipCode" placeholder="Zip Code"/>
+                </div>
+                <div class="col-6 col-12-mobilep">
+                    <input type="text"  name = "Age" id="Age" placeholder="Enter your age 18+"/>
+                </div>
+                <div class="col-6 col-12-mobilep">
+                    <input type="text" name = "FavoriteCelebrity" id="FavoriteCelebrity" placeholder="Enter your favorite celebrity"/>
                 </div>
 <!--                <div class="col-4">-->
 <!--                    <select>-->
@@ -105,12 +111,7 @@
 <!--                        <option value="WY">Wyoming</option>-->
 <!--                    </select>-->
 <!--                </div>-->
-                <div class="col-6 col-12-mobilep">
-                    <input type="text" id="Age" placeholder="Enter your age 18+"/>
-                </div>
-                <div class="col-6 col-12-mobilep">
-                    <input type="text" id="FavoriteCelebrity" placeholder="Enter your favorite celebrity"/>
-                </div>
+
                 <div class="col-12">
                     <ul class="actions special">
                         <li><input type="submit" value="Sign Up!" /></li>
