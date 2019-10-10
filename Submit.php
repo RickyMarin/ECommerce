@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Connection failure";
     }
 
-    $query = "INSERT INTO siteUsers VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Address]', '$_POST[City]', '$_POST[FavoriteCelebrity]', '$hashedPassword', '$_POST[Age]', '$_POST[ZipCode]')";
+    $query = "INSERT INTO siteUsers VALUES ('$_POST[name]','$_POST[email]', '$_POST[Username]', '$_POST[Address]', '$_POST[City]', '$_POST[FavoriteCelebrity]', '$_POST[Password]', '$_POST[Age]', '$_POST[ZipCode]')";
     $result = pg_query($dbconn,$query);
     if(!$result){
         echo "Sign up failed. Please try again!";
