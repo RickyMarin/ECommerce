@@ -181,12 +181,13 @@
     $dbname = 'd8k5ke2dtvb9ue';
     #$dbh = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);
     $dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
-    //if($dbconn){
-    //    echo "Connected!";
-    //}
-    //else{
-    //    echo "Connection failure";
-    //}
+    if($dbconn){
+        echo "Connected!";
+    }
+    else{
+        echo "Connection failure";
+    }
+    echo $_POST[name];
     $query = "INSERT INTO siteUsers (name, email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
     $result = pg_querty($dbconn, $query);
     if(!$result){
