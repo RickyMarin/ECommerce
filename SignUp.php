@@ -187,7 +187,7 @@
     else{
         echo "Connection failure";
     }
-    echo $_POST[name];
+    echo $query;
     $query = "INSERT INTO siteUsers (name, email, username, age, state, address, city, zipcode, favoriteCelebrity) VALUES ('$_POST[name]', '$_POST[email]', '$_POST[Username]', '$_POST[Age]', '$_POST[state]', '$_POST[Address]', '$_POST[City]', '$_POST[ZipCode]', '$_POST[FavoriteCelebrity]')";
     $result = pg_querty($dbconn, $query);
     if(!$result){
