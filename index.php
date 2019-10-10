@@ -16,7 +16,11 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-			<?php include("header.php"); ?>  
+			<?php
+				include("header.php");
+				echo $_ENV["PATH"];
+				echo "hello world";
+			?>  
 				<!--<header id="header" class="alt">
 					<h1><a href="index.html">TalkToMe</a></h1>
 					<nav id="nav">
