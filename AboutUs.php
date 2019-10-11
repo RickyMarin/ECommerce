@@ -46,8 +46,17 @@
 					<div class="box">
 						<h3>What is Talk2Me?</h3>
 						<p> Talk2Me is a platform where fans can book a video call with their favorite celebrities.
-							Our mission is to aid the creation of meaningful interactions for fans.</p>
+							Talk2Me is a fast and easy service with instaneous, high quality calls as well as guaranteed
+							appointments with our partner celebrities. </p>
 						<div class="row">
+							<div class="row-6 row-12-mobilep">
+								<h3>What is our mission?</h3>
+								<p>Our mission is to aid the creation of meaningful interactions for fans. In the day and age
+								of modern social media, with our fast-paced society, meaningful conversations are becoming more of a relic
+								of the past, lowering the amount of quality face-to-face interactions that humans were founded on as social creatures.
+								Our goal is to help revamp these in-person interactions, while at the same time serving the huge popularity out there
+								today for celebrities, from Hollywood stars to athletes to YouTube stars. </p>
+							</div>
 							<div class="row-6 row-12-mobilep">
 								<h3>How Does Talk2Me Work?</h3>
 								<p>Fans can browse through the Talk2Me list of celebrities and select the one
@@ -55,6 +64,13 @@
 									with their availability for the video call. After purchase and confirmation that
 									the celebrity will be able to conduct the video call, Talk2Me will generate a one-time
 									use link to a video chat platform.</p>
+							</div>
+							<div class="row-6 row-12-mobilep">
+								<h3>Which celebrities are we partnered with?</h3>
+								<p>Our celebrity list grows day by day and we do not discriminate on industry. So long as they have
+								a significant following, they can be our partners! The industries convered range from movie stars to NCAA athletes
+								to Instagram models, and much more! If your favority celebrity is not currently on our list, feel free to <a href="contact.php">Contact Us</a>
+								and suggest your celebrity!</p>
 							</div>
 							<div class="row-6 row-12-mobilep">
 								<h3>Why Should I Use Talk2Me?</h3>
