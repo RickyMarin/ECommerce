@@ -6,7 +6,7 @@
 //var_dump($GLOBALS);
 $password = $_POST['Password'];
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
+$dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //    if (empty($_POST["Username"])) {
 //        $UsernameError = "Enter your name";
@@ -59,7 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      echo $_POST["FavoriteCelebrity"] ;
      echo  $hashedPassword;
     echo $_POST["Age"];
-    $dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
     if($dbconn){
         echo "Connected!";
     }
