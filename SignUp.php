@@ -34,7 +34,7 @@
                         <input type="text" name="name" id="name" value="" placeholder="Name"/>
                     </div>
                     <div class="col-6 col-12-mobilep">
-                        <input type="email" name="email" id="email" value="" placeholder="Email"/>
+                        <input type="text" name="email" id="email" value="" placeholder="Email"/>
                     </div>
                     <div class="col-12">
                         <input type="text" name="Username" id="Username" value="" placeholder="Enter a username"/>
