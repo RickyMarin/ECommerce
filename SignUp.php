@@ -222,7 +222,7 @@
         } else {
             if (!preg_match('/^\\d+ [a-zA-Z ]+/', $address)) {
                 echo "<font color=red  size='6pt'>You did not enter a correct address.</font> </p>";
-                $error = true;
+               // $error = true;
             }
         }
         if (empty($city)) {
@@ -235,10 +235,9 @@
 
             }
         }
-        if ($error) {
-            echo "There was an error.";
-        }
-        if ($error = false) {
+
+        if ($error == false) {
+            //echo "<p align='left'> <font color=red  size='6pt'>NO ERRORS.</font> </p>";
             $query = "INSERT INTO customers VALUES ('$_POST[name]','$_POST[Username]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
             $result = pg_query($dbconn, $query);
             if (!$result) {
