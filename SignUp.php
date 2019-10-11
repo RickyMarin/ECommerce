@@ -233,7 +233,6 @@
             }
         }
         if($error=false){
-        $query="INSERT INTO test VALUES('$_POST[name]')";
         $query = "INSERT INTO customers VALUES ('$_POST[name]','$_POST[Username]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
         $result = pg_query($dbconn,$query);
         if(!$result){
