@@ -8,6 +8,15 @@ $password = $_POST['Password'];
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 $dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo $_POST['name'];
+    echo $_POST["email"];
+    echo $_POST["Username"];
+    echo $_POST["Address"];
+    echo $_POST["City"];
+    echo $_POST["FavoriteCelebrity"] ;
+    echo  $hashedPassword;
+    echo $_POST["Age"];
+    echo $_POST["State"];
 //    if (empty($_POST["Username"])) {
 //        $UsernameError = "Enter your name";
 //    } else {
@@ -51,22 +60,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //        $AgeMessage = "Enter a correct age";
 //    }
     //echo $query;
-    echo $_POST['name'];
-    echo $_POST["email"];
-    echo $_POST["Username"];
-     echo $_POST["Address"];
-     echo $_POST["City"];
-     echo $_POST["FavoriteCelebrity"] ;
-     echo  $hashedPassword;
-    echo $_POST["Age"];
+
     if($dbconn){
         echo "Connected!";
     }
     else{
         echo "Connection failure";
     }
-    $query="INSERT INTO test VALUES('$_POST[name]')";
-    //$query = "INSERT INTO siteUsers VALUES ('$_POST[name]','$_POST[email]','$_POST[Username]','$_POST[Address]','$_POST[City]','$_POST[FavoriteCelebrity]','$_POST[Password]','$_POST[Age]','$_POST[ZipCode]')";
+    //$query="INSERT INTO test VALUES('$_POST[name]')";
+    $query = "INSERT INTO customers VALUES ('$_POST[name]','$_POST[Username]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
     $result = pg_query($dbconn,$query);
     if(!$result){
         echo "Sign up failed. Please try again!";
