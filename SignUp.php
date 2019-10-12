@@ -152,13 +152,13 @@
                         <input type="text" name="name" id="name" value="" placeholder="Name"/>
                     </div>
                     <div class="col-6 col-12-mobilep">
-                        <input type="text" name="email" id="email" value="" placeholder="Email"/>
+                        <input type="email" name="email" id="email" value="" placeholder="Email"/>
                     </div>
                     <div class="col-12">
                         <input type="text" name="Username" id="Username" value="" placeholder="Enter a username"/>
                     </div>
                     <div class="col-12">
-                        <input type="text" name="Password" id="Password" placeholder="Enter a password"/>
+                        <input type="password" name="Password" id="Password" placeholder="Enter a password"/>
                     </div>
                     <div class="col-12">
                         <input type="text" name="Address" id="Address" placeholder="Address"/>
