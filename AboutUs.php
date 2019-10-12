@@ -131,6 +131,21 @@
 							<p>  	Eldon Luk is a third-year Computer Science student at UVa who is interested
 							in pursuing a career in Data Science.</p>
 						</div>
+						<div class="row-6 row-12-mobilep">
+							<img src="Ricky Marin.jpeg" alt="Ricky Marin" width="200" height="200" align="left">
+							<h3>  	Ricky Marin</h3>
+							<h4>  	CTO/CFO</h4>
+							<p>  	Ricky Marin is a dedicated third-year college student at UVa who is committed to
+							providing a quality service at a quality cost.</p>
+						</div>
+						
+						
+						<div class="row-6 row-12-mobilep">
+							<img src="Vivian Pham.jpeg" alt="Vivian Pham" width="200" height="200" align="left">
+							<h3>  	Vivian Pham</h3>
+							<h4>  	COO</h4>
+							<p>  	Vivian Pham is a hard worker committed to furthering the company's vision of success</p>
+						</div>
 				</div>
 		</section>
 
