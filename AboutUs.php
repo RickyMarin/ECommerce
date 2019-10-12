@@ -12,30 +12,60 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+
+    <style>
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .us {
+            background-color: lightgray;
+            color: white;
+            margin: 10px;
+            padding: 30px;
+            display: table-cell;
+            height: 350px;
+            vertical-align: middle;
+        }
+    </style>
+
 	<body class="is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-            <?php include("header.php"); ?>  
-				<!--<header id="header">
-					<h1><a href="index.html">Talk2Me</a> </h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">Browse</a>
-								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="AboutUs.html">About Us</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="SignUp.html">Sign Up</a></li>
-									<li><a href="Login.html">Login</a></li>
-								</ul>
-							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
-						</ul>
-					</nav>
-				</header>-->
+            <?php include("header.php"); ?>
 
 			<!-- Main -->
 			<script>
@@ -45,12 +75,9 @@
 	
 				function startTab() {
 					document.getElementById("defaultOpen").click();
-	
 				}
-				// Get the element with id="defaultOpen" and click on it
-				//document.getElementById("defaultOpen").click();
-				
-				function openPage(pageName) {
+
+				function openPage(evt, pageName) {
 				  // Hide all elements with class="tabcontent" by default */
 				  var i, tabcontent, tablinks;
 				  tabcontent = document.getElementsByClassName("tabcontent");
@@ -61,22 +88,21 @@
 				  // Remove the background color of all tablinks/buttons
 				  tablinks = document.getElementsByClassName("tablink");
 				  for (i = 0; i < tablinks.length; i++) {
-					tablinks[i].style.backgroundColor = "";
+					//tablinks[i].style.backgroundColor = "";
+                      tablinks[i].className = tablinks[i].className.replace(" active", "");
 				  }
 				
 				  // Show the specific tab content
 				  document.getElementById(pageName).style.display = "block";
-				
-				  // Add the specific color to the button used to open the tab content
-				  //elmnt.style.backgroundColor = color;
+				  evt.currentTarget.className += " active";
 				}
 		</script>
-		
+
 		<section id="main" class="container">		
 			<h2 style="text-align:center;">About Us</h2>
 			<div class="tab">
-				<button class="tablink" onclick="openPage('What is')" id="defaultOpen">What is Talk2Me?</button>
-				<button class="tablink" onclick="openPage('Who')">Who are we?</button>
+				<button class="tablink" onclick="openPage(event,'What is')" id="defaultOpen">What is Talk2Me?</button>
+				<button class="tablink" onclick="openPage(event,'Who')">Who are we?</button>
 			</div>
 			<div id="What is" class="tabcontent">
 				<div class="box">
@@ -121,50 +147,36 @@
 					<a href="SignUp.php" class="button">Sign Up Now</a>
 				</div>
 			</div>
+
 			<div id="Who" class="tabcontent">
 				<div class="box">
 					<h2>Who are we?</h2>
-						<div class="row-6 row-12-mobilep">
-							<img src="Eldon Luk.jpg" alt="Eldon Luk" width="200" height="200" align="left">
-							<h3>  	Eldon Luk</h3>
-							<h4>  	CEO</h4>
-							<p>  	Eldon Luk is a third-year Computer Science student at UVa who is interested
+						<div class="us">
+							<img src="Eldon Luk.jpg" alt="Eldon Luk" width="180" height="180" align="left">
+							<h3 style="text-align:center">Eldon Luk</h3>
+							<h4 style="text-align:center">CEO</h4>
+							<p style="text-align:center; color:black">Eldon Luk is a third-year Computer Science student at UVa who is interested
 							in pursuing a career in Data Science.</p>
 						</div>
-						<div class="row-6 row-12-mobilep">
-							<img src="Ricky Marin.jpeg" alt="Ricky Marin" width="200" height="200" align="left">
-							<h3>  	Ricky Marin</h3>
-							<h4>  	CTO/CFO</h4>
-							<p>  	Ricky Marin is a dedicated third-year college student at UVa who is committed to
+						<div class="us">
+							<img src="Ricky Marin.jpeg" alt="Ricky Marin" width="180" height="180" align="left">
+							<h3 style="text-align:center">Ricky Marin</h3>
+							<h4 style="text-align:center">CTO/CFO</h4>
+							<p style="text-align:center; color:black">Ricky Marin is a dedicated third-year college student at UVa who is committed to
 							providing a quality service at a quality cost.</p>
 						</div>
-						
-						
-						<div class="row-6 row-12-mobilep">
-							<img src="Vivian Pham.jpeg" alt="Vivian Pham" width="200" height="200" align="left">
-							<h3>  	Vivian Pham</h3>
-							<h4>  	COO</h4>
-							<p>  	Vivian Pham is a hard worker committed to furthering the company's vision of success</p>
+						<div class="us">
+							<img src="Vivian Pham.jpeg" alt="Vivian Pham" width="180" height="180" align="left">
+							<h3 style="text-align:center">Vivian Pham</h3>
+							<h4 style="text-align:center">COO</h4>
+							<p style="text-align:center; color:black">Vivian Pham is a hard worker committed to furthering and managing the company's vision of success.</p>
 						</div>
 				</div>
 		</section>
 
 
 			<!-- Footer -->
-			<?php include("footer.php"); ?>  
-				<!--<footer id="footer">
-				<!--	<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; 2019 Talk2Me. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>-->
+			<?php include("footer.php"); ?>
 
 		</div>
 
