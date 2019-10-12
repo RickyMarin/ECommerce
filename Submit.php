@@ -52,17 +52,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $AgeMessage = "Enter a correct age";
     }
 
-    if($dbconn){
-        echo "Connected!";
-    }
-    else{
-        echo "Connection failure";
-    }
     //$query="INSERT INTO test VALUES('$_POST[name]')";
     $query = "INSERT INTO customers VALUES ('$_POST[name]','$_POST[Username]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
     $result = pg_query($dbconn,$query);
     if(!$result){
-        echo "Sign up failed. Please try again!";
+        echo "You have chosen a Username that has already been chosen. Please enter a new username.";
     }
     else{
         echo "Sign up Success! Talk to your favorite celebrity now!";

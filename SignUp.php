@@ -54,7 +54,7 @@
                 // echo "<font size="45" "Enter your name">";
             } else {
                 // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
+                if (!preg_match("/^[a-zA-Z]*$/", $name)) {
                     echo "<font color=red  size='5pt'>You have an invalid character in your name.</font> </p>";
                     $error = true;
 
@@ -65,8 +65,7 @@
                 $error = true;
                 // echo "<font size="45" "Enter your name">";
             } else {
-                // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z]*$/", $username)) {
+                if (!preg_match("/^[A-Za-z0-9]+$/", $username)) {
                     echo "<font color=red  size='5pt'>You need a proper username.</font> </p>";
                     $error = true;
 
@@ -138,7 +137,7 @@
                 $query = "INSERT INTO customers VALUES ('$_POST[name]','$_POST[Username]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
                 $result = pg_query($dbconn, $query);
                 if (!$result) {
-                    echo "Sign up failed. Please try again!";
+                    echo "You have chosen a Username that has already been chosen. Please enter a new username.";
                 } else {
                     echo "Sign up Success! Talk to your favorite celebrity now!";
                 }
