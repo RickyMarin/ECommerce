@@ -39,7 +39,18 @@
 
 			<!-- Main -->
 			<script>
-				function openPage(pageName, elmnt, color) {
+				window.onload = function () {
+                startTab();
+				};
+	
+				function startTab() {
+					document.getElementById("defaultOpen").click();
+	
+				}
+				// Get the element with id="defaultOpen" and click on it
+				//document.getElementById("defaultOpen").click();
+				
+				function openPage(pageName) {
 				  // Hide all elements with class="tabcontent" by default */
 				  var i, tabcontent, tablinks;
 				  tabcontent = document.getElementsByClassName("tabcontent");
@@ -59,16 +70,13 @@
 				  // Add the specific color to the button used to open the tab content
 				  //elmnt.style.backgroundColor = color;
 				}
-				
-				// Get the element with id="defaultOpen" and click on it
-				document.getElementById("defaultOpen").click();
 		</script>
 		
 		<section id="main" class="container">		
 			<h2 style="text-align:center;">About Us</h2>
 			<div class="tab">
-				<button class="tablink" onclick="openPage('What is', this, 'green')" id="defaultOpen">What is Talk2Me?</button>
-				<button class="tablink" onclick="openPage('Who', this, 'red')">Who are we?</button>
+				<button class="tablink" onclick="openPage('What is')" id="defaultOpen">What is Talk2Me?</button>
+				<button class="tablink" onclick="openPage('Who')">Who are we?</button>
 			</div>
 			<div id="What is" class="tabcontent">
 				<div class="box">
@@ -116,6 +124,7 @@
 			<div id="Who" class="tabcontent">
 				<div class="box">
 					<h3>Who are we?</h3>
+					
 				</div>
 		</section>
 
