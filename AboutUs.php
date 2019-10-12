@@ -123,8 +123,14 @@
 			</div>
 			<div id="Who" class="tabcontent">
 				<div class="box">
-					<h3>Who are we?</h3>
-					
+					<h2>Who are we?</h2>
+						<div class="row-6 row-12-mobilep">
+							<img src="Eldon Luk.jpg" alt="Eldon Luk" width="200" height="200" align="left">
+							<h3>  	Eldon Luk</h3>
+							<h4>  	CEO</h4>
+							<p>  	Eldon Luk is a third-year Computer Science student at UVa who is interested
+							in pursuing a career in Data Science.</p>
+						</div>
 				</div>
 		</section>
 
