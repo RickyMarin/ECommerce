@@ -54,7 +54,7 @@
                 // echo "<font size="45" "Enter your name">";
             } else {
                 // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z]*$/", $name)) {
+                if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
                     echo "<font color=red  size='5pt'>You have an invalid character in your name.</font> </p>";
                     $error = true;
 
