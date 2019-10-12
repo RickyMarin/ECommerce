@@ -5,6 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 
+
 <html>
 <head>
     <link rel="icon" href="images/favicon.ico" type="image/ico">
@@ -24,8 +25,126 @@
         <header>
             <h2>Sign Up</h2>
             <p>Sign up now to join all the action!
-                Any errors will be listed below the form.</p>
+                Any errors will be listed below.</p>
         </header>
+        <?php
+        $dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
+        function makeSafe($value)
+        {
+            $value = htmlspecialchars($value);
+            return $value;
+        }
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $UsernameError = $emailMessage = $genderErr = $AgeMessage = "";
+            $Username = $email = $ZipMessage = $comment = $hashedPassword = "";
+            $age = $ZipCode = 0;
+            $error = false;
+            $password = $_POST['Password'];
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+            $name = makeSafe($_POST["name"]);
+            $username = makeSafe($_POST["Username"]);
+            $city = makeSafe($_POST["City"]);
+            $address = makeSafe($_POST["Address"]);
+            $email = makeSafe($_POST["email"]);
+            $favoriteCelebrity = makeSafe($_POST["FavoriteCelebrity"]);
+            if (empty($name)) {
+                echo "<font color=red  size='5pt'>Enter your name.</font> </p>";
+                $error = true;
+                // echo "<font size="45" "Enter your name">";
+            } else {
+                // check if name only contains letters and whitespace
+                if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
+                    echo "<font color=red  size='5pt'>You have an invalid character in your name.</font> </p>";
+                    $error = true;
+
+                }
+            }
+            if (empty($username)) {
+                echo "<p align='left'> <font color=red  size='5pt'>Enter an username.</font> </p>";
+                $error = true;
+                // echo "<font size="45" "Enter your name">";
+            } else {
+                // check if name only contains letters and whitespace
+                if (!preg_match("/^[a-zA-Z]*$/", $username)) {
+                    echo "<font color=red  size='5pt'>You need a proper username.</font> </p>";
+                    $error = true;
+
+                }
+            }
+            //name is fine, moves on to email
+            if (empty($email)) {
+                echo "<font color=red  size='5pt'>Enter an Email.</font> </p>";
+                $error = true;
+            } else {
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    echo "<font color=red  size='5pt'>You need a proper email format.</font> </p>";
+                    $error = true;
+                }
+            }
+            if (empty($_POST["Age"])) {
+                echo "<font color=red  size='5pt'>You did not enter an Age.</font> </p>";
+                $error = true;
+            } else {
+                $age = $_POST["Age"];
+                if (!filter_var(intval($age), FILTER_VALIDATE_INT)) {
+                    echo "<font color=red  size='5pt'>You did not enter a number for your age.</font> </p>";
+                    $error = true;
+                }
+                if (intval($age) > 110 || intval($age) < 18) {
+                    echo "<font color=red  size='5pt'>You are not the proper age.</font> </p>";
+                    $error = true;
+                }
+                //Age is fine
+            }
+            if (empty($_POST["ZipCode"])) {
+                echo "<font color=red  size='5pt'>You did not enter a Zip Code.</font> </p>";
+                $error = true;
+            } else {
+                $ZipCode = $_POST["ZipCode"];
+                if (!filter_var(intval($ZipCode), FILTER_VALIDATE_INT)) {
+                    echo "<font color=red  size='5pt'>You did not enter a proper number for Zip Code.</font> </p>";
+                    $error = true;
+                }
+                if (strlen($ZipCode) != 5) {
+                    echo "<font color=red  size='5pt'>You did not enter a proper 5 digit Zip Code.</font> </p>";
+                    $error = true;
+                }
+
+            }
+
+            if (empty($_POST["Address"])) {
+                echo "<font color=red  size='5pt'>You did not enter an address.</font> </p>";
+                $error = true;
+            } else {
+                if (!preg_match('/^\\d+ [a-zA-Z ]+/', $address)) {
+                    echo "<font color=red  size='5pt'>You did not enter a correct address.</font> </p>";
+                    $error = true;
+                }
+            }
+            if (empty($city)) {
+                echo "<p align='left'> <font color=red  size='5pt'>Enter a city.</font> </p>";
+                $error = true;
+            } else {
+                if (!preg_match("/^[a-zA-Z]*$/", $city)) {
+                    echo "<font color=red  size='5pt'>You need a proper city.</font> </p>";
+                    $error = true;
+
+                }
+            }
+
+            if ($error == false) {
+                //echo "<p align='left'> <font color=red  size='6pt'>NO ERRORS.</font> </p>";
+                $query = "INSERT INTO customers VALUES ('$_POST[name]','$_POST[Username]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
+                $result = pg_query($dbconn, $query);
+                if (!$result) {
+                    echo "Sign up failed. Please try again!";
+                } else {
+                    echo "Sign up Success! Talk to your favorite celebrity now!";
+                }
+            }
+        }
+        ?>
         <div class="box">
             <form id="insert" name="insert" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                   method="POST">
@@ -129,125 +248,6 @@
 
     <!-- Footer -->
 
-    <?php
-
-    $dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
-    function makeSafe($value)
-    {
-        $value = htmlspecialchars($value);
-        return $value;
-    }
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $UsernameError = $emailMessage = $genderErr = $AgeMessage = "";
-        $Username = $email = $ZipMessage = $comment = $hashedPassword = "";
-        $age = $ZipCode = 0;
-        $error = false;
-        $password = $_POST['Password'];
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $name = makeSafe($_POST["name"]);
-        $username = makeSafe($_POST["Username"]);
-        $city = makeSafe($_POST["City"]);
-        $address = makeSafe($_POST["Address"]);
-        $email = makeSafe($_POST["email"]);
-        $favoriteCelebrity = makeSafe($_POST["FavoriteCelebrity"]);
-        if (empty($name)) {
-            echo "<p align='left'> <font color=red  size='6pt'>Enter your name.</font> </p>";
-            $error = true;
-            // echo "<font size="45" "Enter your name">";
-        } else {
-            // check if name only contains letters and whitespace
-            if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
-                echo "<font color=red  size='6pt'>You have an invalid character in your name.</font> </p>";
-                $error = true;
-
-            }
-        }
-        if (empty($username)) {
-            echo "<p align='left'> <font color=red  size='6pt'>Enter an username.</font> </p>";
-            $error = true;
-            // echo "<font size="45" "Enter your name">";
-        } else {
-            // check if name only contains letters and whitespace
-            if (!preg_match("/^[a-zA-Z]*$/", $username)) {
-                echo "<font color=red  size='6pt'>You need a proper username.</font> </p>";
-                $error = true;
-
-            }
-        }
-        //name is fine, moves on to email
-        if (empty($email)) {
-            echo "<font color=red  size='6pt'>Enter an Email.</font> </p>";
-            $error = true;
-        } else {
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailMessage = "Invalid email format";
-                $error = true;
-            }
-        }
-        if (empty($_POST["Age"])) {
-            echo "<font color=red  size='6pt'>You did not enter an Age.</font> </p>";
-            $error = true;
-        } else {
-            $age = $_POST["Age"];
-            if (!filter_var(intval($age), FILTER_VALIDATE_INT)) {
-                echo "<font color=red  size='6pt'>You did not enter a number for your age.</font> </p>";
-                $error = true;
-            }
-            if (intval($age) > 110 || intval($age) < 18) {
-                echo "<font color=red  size='6pt'>You are not the proper age.</font> </p>";
-                $error = true;
-            }
-            //Age is fine
-        }
-        if (empty($_POST["ZipCode"])) {
-            echo "<font color=red  size='6pt'>You did not enter a Zip Code.</font> </p>";
-            $error = true;
-        } else {
-            $ZipCode = $_POST["ZipCode"];
-            if (!filter_var(intval($ZipCode), FILTER_VALIDATE_INT)) {
-                echo "<font color=red  size='6pt'>You did not enter a proper number for Zip Code.</font> </p>";
-                $error = true;
-            }
-            if (strlen($ZipCode) != 5) {
-                echo "<font color=red  size='6pt'>You did not enter a proper 5 digit Zip Code.</font> </p>";
-                $error = true;
-            }
-
-        }
-
-        if (empty($_POST["Address"])) {
-            echo "<font color=red  size='6pt'>You did not enter an address.</font> </p>";
-            $error = true;
-        } else {
-            if (!preg_match('/^\\d+ [a-zA-Z ]+/', $address)) {
-                echo "<font color=red  size='6pt'>You did not enter a correct address.</font> </p>";
-               // $error = true;
-            }
-        }
-        if (empty($city)) {
-            echo "<p align='left'> <font color=red  size='6pt'>Enter a city.</font> </p>";
-            $error = true;
-        } else {
-            if (!preg_match("/^[a-zA-Z]*$/", $city)) {
-                echo "<font color=red  size='6pt'>You need a proper city.</font> </p>";
-                $error = true;
-
-            }
-        }
-
-        if ($error == false) {
-            //echo "<p align='left'> <font color=red  size='6pt'>NO ERRORS.</font> </p>";
-            $query = "INSERT INTO customers VALUES ('$_POST[name]','$_POST[Username]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
-            $result = pg_query($dbconn, $query);
-            if (!$result) {
-                echo "Sign up failed. Please try again!";
-            } else {
-                echo "Sign up Success! Talk to your favorite celebrity now!";
-            }
-        }
-    }
-    ?>
 
 
 </div>
