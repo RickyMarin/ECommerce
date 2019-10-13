@@ -28,7 +28,7 @@
                 Any errors will be listed below.</p>
         </header>
         <?php
-        $dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
+        //$dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
         function makeSafe($value)
         {
             $value = htmlspecialchars($value);
@@ -157,24 +157,31 @@
                   method="POST">
                 <div class="row gtr-50 gtr-uniform">
                     <div class="col-6 col-12-mobilep">
+                        <label for="NameLabel">Name:</label>
                         <input type="text" name="name" id="name" value="" placeholder="Name"/>
                     </div>
                     <div class="col-6 col-12-mobilep">
+                        <label for="emailLabel">Email:</label>
                         <input type="email" name="email" id="email" value="" placeholder="Email"/>
                     </div>
                     <div class="col-12">
+                        <label for="UsernameLabel">Username:</label>
                         <input type="text" name="Username" id="Username" value="" placeholder="Enter a username"/>
                     </div>
                     <div class="col-12">
+                        <label for="PasswordLabel">Password::</label>
                         <input type="password" name="Password" id="Password" placeholder="Enter a password"/>
                     </div>
                     <div class="col-12">
+                        <label for="AddressLabel">Address:</label>
                         <input type="text" name="Address" id="Address" placeholder="Address"/>
                     </div>
                     <div class="col-4">
+                        <label for="CityLabel">City:</label>
                         <input type="text" name="City" id="City" placeholder="City"/>
                     </div>
                     <div class="col-4">
+                        <label for="State">State:</label>
                         <select name="State">
                             <option value="" disabled selected>State</option>
                             <option value="AL">Alabama</option>
@@ -231,13 +238,16 @@
                         </select>
                     </div>
                     <div class="col-4">
+                        <label for="ZipCodeLabel">Zip Code:</label>
                         <input type="text" name="ZipCode" id="ZipCode" placeholder="Zip Code"/>
                     </div>
 
                     <div class="col-6 col-12-mobilep">
+                        <label for="AgeLabel">Age:</label>
                         <input type="text" name="Age" id="Age" placeholder="Enter your age 18+"/>
                     </div>
                     <div class="col-6 col-12-mobilep">
+                        <label for="FavoriteCelebrityLabel">Favorite Celebrity:</label>
                         <input type="text" name="FavoriteCelebrity" id="FavoriteCelebrity"
                                placeholder="Enter your favorite celebrity"/>
                     </div>
