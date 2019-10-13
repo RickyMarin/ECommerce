@@ -16,26 +16,7 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-            <?php include("header.php"); ?>  
-				<!--<header id="header">
-					<h1><a href="index.html">Talk2Me</a> </h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">Browse</a>
-								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="AboutUs.html">About Us</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="SignUp.html">Sign Up</a></li>
-									<li><a href="Login.html">Login</a></li>
-								</ul>
-							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
-						</ul>
-					</nav>
-				</header>-->
+            <?php include("header.php"); ?>
 
 			<section id="main" class="container medium">
 				<header>
@@ -63,19 +44,6 @@
 
 			<!-- Footer -->
 			<?php include("footer.php"); ?>  
-				<!--<footer id="footer">
-				<!--	<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; 2019 Talk2Me. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>-->
 
 		</div>
 
