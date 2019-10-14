@@ -30,6 +30,7 @@
             cursor: pointer;
             padding: 14px 16px;
             transition: 0.3s;
+            color: black;
         }
 
         /* Change background color of buttons on hover */
@@ -39,13 +40,13 @@
 
         /* Create an active/current tablink class */
         .tab button.active {
-            background-color: #ccc;
+            background-color: #EFCA46;
         }
 
         /* Style the tab content */
         .tabcontent {
             display: none;
-            padding: 6px 12px;
+            padding: 0;
             border: 1px solid #ccc;
             border-top: none;
         }
@@ -55,8 +56,7 @@
             color: white;
             margin: 10px;
             padding: 30px;
-            display: table-cell;
-            height: 350px;
+            height: 250px;
             vertical-align: middle;
         }
     </style>
@@ -103,8 +103,7 @@
 			<div class="tab">
 				<button class="tablink" onclick="openPage(event,'What is')" id="defaultOpen">What is Talk2Me?</button>
 				<button class="tablink" onclick="openPage(event,'Who')">Who are we?</button>
-			</div>
-			<div id="What is" class="tabcontent">
+            <div id="What is" class="tabcontent">
 				<div class="box">
 					<h3>What is Talk2Me?</h3>
 					<p> Talk2Me is a platform where fans can book a video call with their favorite celebrities.
@@ -162,14 +161,14 @@
 							<img src="Ricky Marin.jpeg" alt="Ricky Marin" width="180" height="180" align="left">
 							<h3 style="text-align:center">Ricky Marin</h3>
 							<h4 style="text-align:center">CTO/CFO</h4>
-							<p style="text-align:center; color:black">Ricky Marin is a dedicated third-year college student at UVa who is committed to
-							providing a quality service at a quality cost.</p>
+							<p style="text-align:center; color:black">Ricky Marin is a dedicated third-year college student at UVa who is truly committed to
+							providing a quality service at a quality cost as CTO/CFO.</p>
 						</div>
 						<div class="us">
 							<img src="Vivian Pham.jpeg" alt="Vivian Pham" width="180" height="180" align="left">
 							<h3 style="text-align:center">Vivian Pham</h3>
 							<h4 style="text-align:center">COO</h4>
-							<p style="text-align:center; color:black">Vivian Pham is a hard worker committed to furthering and managing the company's vision of success.</p>
+							<p style="text-align:center; color:black">Vivian Pham is a hard working UVa student committed to furthering and managing the company's vision of success.</p>
 						</div>
 				</div>
 		</section>

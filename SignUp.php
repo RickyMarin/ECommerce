@@ -155,7 +155,7 @@
                         <input type="email" name="email" id="email" value="" placeholder="Email"/>
                     </div>
                     <div class="col-12">
-                        <label for="PasswordLabel">Password::</label>
+                        <label for="PasswordLabel">Password:</label>
                         <input type="password" name="Password" id="Password" placeholder="Enter a password"/>
                     </div>
                     <div class="col-12">
