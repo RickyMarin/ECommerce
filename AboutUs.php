@@ -170,7 +170,7 @@
 							<img src="Vivian Pham.jpeg" alt="Vivian Pham" width="180" height="180" align="left">
 							<h3 style="text-align:center">Vivian Pham</h3>
 							<h4 style="text-align:center">COO</h4>
-							<p style="text-align:center; color:black">Vivian Pham is a hard worker committed to furthering and managing the company's vision of success.</p>
+							<p style="text-align:center; color:black">Vivian Pham is a hard working UVa student committed to furthering and managing the company's vision of success.</p>
 						</div>
 				</div>
 		</section>
