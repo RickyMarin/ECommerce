@@ -45,8 +45,8 @@
 
         /* Style the tab content */
         .tabcontent {
-            display: none;
-            padding: 6px 12px;
+            display: flex;
+            padding: 20px 30px 30px;
             border: 1px solid #ccc;
             border-top: none;
         }
@@ -103,7 +103,8 @@
 			<div class="tab">
 				<button class="tablink" onclick="openPage(event,'What is')" id="defaultOpen">What is Talk2Me?</button>
 				<button class="tablink" onclick="openPage(event,'Who')">Who are we?</button>
-			</div><div id="What is" class="tabcontent">
+			</div>
+            <div id="What is" class="tabcontent">
 				<div class="box">
 					<h3>What is Talk2Me?</h3>
 					<p> Talk2Me is a platform where fans can book a video call with their favorite celebrities.
