@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<header id="header">
-			<h1><a href="index.php">Talk2Me</a></h1>
+            <img src="images/logo.png" width="100" height="100">
 			<nav id="nav">
 				<ul>
 					<!--<li>-->

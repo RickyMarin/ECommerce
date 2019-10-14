@@ -16,10 +16,7 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-			<?php
-				include("header.php");
-				echo $_ENV["PATH"];
-			?>
+			<?php include("header.php"); ?>
 
 <!-- Banner -->
 				<section id="banner">
