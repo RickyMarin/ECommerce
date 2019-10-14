@@ -46,7 +46,7 @@
         /* Style the tab content */
         .tabcontent {
             display: none;
-            padding: 5px;
+            padding: 0;
             border: 1px solid #ccc;
             border-top: none;
         }
