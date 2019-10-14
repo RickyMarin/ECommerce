@@ -40,7 +40,7 @@
 
         /* Create an active/current tablink class */
         .tab button.active {
-            background-color: #ccc;
+            background-color: #EFCA46;
         }
 
         /* Style the tab content */
