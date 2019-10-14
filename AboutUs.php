@@ -164,7 +164,7 @@
 							<h3 style="text-align:center">Ricky Marin</h3>
 							<h4 style="text-align:center">CTO/CFO</h4>
 							<p style="text-align:center; color:black">Ricky Marin is a dedicated third-year college student at UVa who is truly committed to
-							providing a quality service at a quality cost.</p>
+							providing a quality service at a quality cost as Chief Technology Officer and Chief Financial Officer.</p>
 						</div>
 						<div class="us">
 							<img src="Vivian Pham.jpeg" alt="Vivian Pham" width="180" height="180" align="left">
