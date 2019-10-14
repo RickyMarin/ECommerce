@@ -169,7 +169,7 @@
                         <input type="text" name="Username" id="Username" value="" placeholder="Enter a username"/>
                     </div>
                     <div class="col-12">
-                        <label for="PasswordLabel">Password::</label>
+                        <label for="PasswordLabel">Password:</label>
                         <input type="password" name="Password" id="Password" placeholder="Enter a password"/>
                     </div>
                     <div class="col-12">

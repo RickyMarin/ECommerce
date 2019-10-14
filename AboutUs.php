@@ -45,8 +45,8 @@
 
         /* Style the tab content */
         .tabcontent {
-            display: flex;
-            padding: 20px 30px 30px;
+            display: none;
+            padding: 5px;
             border: 1px solid #ccc;
             border-top: none;
         }
