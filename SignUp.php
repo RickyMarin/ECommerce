@@ -43,7 +43,7 @@
             $password = $_POST['Password'];
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             $name = makeSafe($_POST["name"]);
-            $username = makeSafe($_POST["Username"]);
+            //$username = makeSafe($_POST["Username"]);
             $city = makeSafe($_POST["City"]);
             $address = makeSafe($_POST["Address"]);
             $email = makeSafe($_POST["email"]);
@@ -60,17 +60,7 @@
 
                 }
             }
-            if (empty($username)) {
-                echo "<p align='left'> <font color=red  size='5pt'>Enter an username.</font> </p>";
-                $error = true;
-                // echo "<font size="45" "Enter your name">";
-            } else {
-                if (!preg_match("/^[A-Za-z0-9]+$/", $username)) {
-                    echo "<font color=red  size='5pt'>You need a proper username.</font> </p>";
-                    $error = true;
 
-                }
-            }
             //name is fine, moves on to email
             if (empty($email)) {
                 echo "<font color=red  size='5pt'>Enter an Email.</font> </p>";
@@ -142,10 +132,10 @@
 
             if ($error == false) {
                 //echo "<p align='left'> <font color=red  size='6pt'>NO ERRORS.</font> </p>";
-                $query = "INSERT INTO customers VALUES ('$_POST[name]','$_POST[Username]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
+                $query = "INSERT INTO users VALUES ('$_POST[name]',$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
                 $result = pg_query($dbconn, $query);
                 if (!$result) {
-                    echo "You have chosen a Username that has already been chosen. Please enter a new username.";
+                    echo "You have entered an email that has already been signed up. Please enter a different email.";
                 } else {
                     echo "Sign up Success! Talk to your favorite celebrity now!";
                 }
@@ -163,10 +153,6 @@
                     <div class="col-6 col-12-mobilep">
                         <label for="emailLabel">Email:</label>
                         <input type="email" name="email" id="email" value="" placeholder="Email"/>
-                    </div>
-                    <div class="col-12">
-                        <label for="UsernameLabel">Username:</label>
-                        <input type="text" name="Username" id="Username" value="" placeholder="Enter a username"/>
                     </div>
                     <div class="col-12">
                         <label for="PasswordLabel">Password::</label>
