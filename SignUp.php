@@ -132,7 +132,7 @@
 
             if ($error == false) {
                 //echo "<p align='left'> <font color=red  size='6pt'>NO ERRORS.</font> </p>";
-                $query = "INSERT INTO users VALUES ('$_POST[name]',$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
+                $query = "INSERT INTO users VALUES ('$_POST[name]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword')";
                 $result = pg_query($dbconn, $query);
                 if (!$result) {
                     echo "You have entered an email that has already been signed up. Please enter a different email.";
