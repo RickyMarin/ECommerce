@@ -56,8 +56,7 @@
             color: white;
             margin: 10px;
             padding: 30px;
-            display: table-cell;
-            height: 350px;
+            height: 250px;
             vertical-align: middle;
         }
     </style>
@@ -152,21 +151,21 @@
 			<div id="Who" class="tabcontent">
 				<div class="box">
 					<h2>Who are we?</h2>
-						<div class="box">
+						<div class="us">
 							<img src="Eldon Luk.jpg" alt="Eldon Luk" width="180" height="180" align="left">
 							<h3 style="text-align:center">Eldon Luk</h3>
 							<h4 style="text-align:center">CEO</h4>
 							<p style="text-align:center; color:black">Eldon Luk is a third-year Computer Science student at UVa who is interested
 							in pursuing a career in Data Science.</p>
 						</div>
-						<div class="box">
+						<div class="us">
 							<img src="Ricky Marin.jpeg" alt="Ricky Marin" width="180" height="180" align="left">
 							<h3 style="text-align:center">Ricky Marin</h3>
 							<h4 style="text-align:center">CTO/CFO</h4>
 							<p style="text-align:center; color:black">Ricky Marin is a dedicated third-year college student at UVa who is truly committed to
 							providing a quality service at a quality cost as CTO/CFO.</p>
 						</div>
-						<div class="box">
+						<div class="us">
 							<img src="Vivian Pham.jpeg" alt="Vivian Pham" width="180" height="180" align="left">
 							<h3 style="text-align:center">Vivian Pham</h3>
 							<h4 style="text-align:center">COO</h4>
