@@ -107,7 +107,7 @@
                 echo "<font color=red  size='5pt'>You did not enter an address.</font> </p>";
                 $error = true;
             } else {
-                if (!preg_match('/^\\d+ [a-zA-Z ]+/', $address)) {
+                if (!preg_match('/^\\d+ [a-z0-9A-Z ]+/', $address)) {
                     echo "<font color=red  size='5pt'>You did not enter a correct address.</font> </p>";
                     $error = true;
                 }
