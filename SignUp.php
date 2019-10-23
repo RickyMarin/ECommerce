@@ -21,15 +21,6 @@
         width: 100%;
         height: 2em;
     }
-
-    input[type=radio]:checked + label:after {
-        border-radius: 11px;
-        height: 2em;
-        position: absolute;
-        content: " ";
-        display: block;
-        background: #004c97;
-    }
 </style>
 
 <body class="is-preload">
