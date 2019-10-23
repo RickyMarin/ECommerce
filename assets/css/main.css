@@ -3938,6 +3938,9 @@ img {
   height: auto;
 }
 
-
+.image-link
+{
+  text-decoration: none;
+}
 
 

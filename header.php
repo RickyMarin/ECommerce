@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<header id="header">
-            <a href="index.php" style="text-decoration:none"><img src="images/logo.png" width="100" height="100"></a>
+            <a href="index.php" class="image-link"><img src="images/logo.png" width="100" height="100"></a>
 			<nav id="nav">
 				<ul>
 					<!--<li>-->
