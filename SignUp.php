@@ -15,17 +15,6 @@
     <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
 
-<style>
-    input[type=radio] {
-        border: 0px;
-        width: 100%;
-        height: 2em;
-    }
-    input[type="radio"]:checked+label {
-        font-weight: bold;
-    }
-</style>
-
 <body class="is-preload">
 <div id="page-wrapper">
 
