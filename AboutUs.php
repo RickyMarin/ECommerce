@@ -160,14 +160,14 @@
 						<div class="us">
 							<img src="Ricky Marin.jpeg" alt="Ricky Marin" width="180" height="180" align="left">
 							<h3 style="text-align:center">Ricky Marin</h3>
-							<h4 style="text-align:center">Technologist</h4>
+							<h4 style="text-align:center">Chief Technology Officer</h4>
 							<p style="text-align:center; color:black">Ricky Marin is a dedicated third-year college student at UVa who is truly committed to
 							providing a quality service at a quality cost as CTO/CFO.</p>
 						</div>
 						<div class="us">
 							<img src="Vivian Pham.jpeg" alt="Vivian Pham" width="180" height="180" align="left">
 							<h3 style="text-align:center">Vivian Pham</h3>
-							<h4 style="text-align:center">Marketing</h4>
+							<h4 style="text-align:center">Chief Marketing Officer</h4>
 							<p style="text-align:center; color:black">Vivian Pham is a hard working UVa student committed to furthering and managing the company's vision of success.</p>
 						</div>
 				</div>
