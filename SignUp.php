@@ -243,8 +243,8 @@
                                placeholder="Enter your favorite celebrity"/>
                     </div>
                     <div class="">
-                        <input type="radio" name="membership" value="basic" /> <label for="basic">Basic Membership: $19.99/month, with 5 calls a month</label><br>
-                        <input type="radio" name="membership" value="premium"/> <label for="premium">Premium Membership: $49.99/month, with unlimited calls a month</label>
+                        <input type="radio" name="membership" value="basic" id="b" /> <label for="b">Basic Membership: $19.99/month, with 5 calls a month</label><br>
+                        <input type="radio" name="membership" value="premium" id="p"/> <label for="p">Premium Membership: $49.99/month, with unlimited calls a month</label>
                     </div>
 
                     <div class="col-12">
