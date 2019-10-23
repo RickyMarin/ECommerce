@@ -147,6 +147,10 @@
                 echo "<font color=red  size='5pt'>You did not enter a password.</font> </p>";
                 $error = true;
             }
+            if (empty($_POST["State"])) {
+                echo "<font color=red  size='5pt'>You did not enter a state</font> </p>";
+                $error = true;
+            }
 
             if ($error == false) {
                 //echo "<p align='left'> <font color=red  size='6pt'>NO ERRORS.</font> </p>";
