@@ -21,8 +21,8 @@
         width: 100%;
         height: 2em;
     }
-    
-    .radio-item input[type=radio]:checked + label:after {
+
+    input[type=radio]:checked + label:after {
         border-radius: 11px;
         height: 2em;
         position: absolute;
