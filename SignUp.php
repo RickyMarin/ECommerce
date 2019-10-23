@@ -21,15 +21,6 @@
         width: 100%;
         height: 2em;
     }
-
-    input[type=radio]:checked + label:after {
-        border-radius: 11px;
-        height: 2em;
-        position: absolute;
-        content: " ";
-        display: block;
-        background: #004c97;
-    }
 </style>
 
 <body class="is-preload">
@@ -260,8 +251,8 @@
                                placeholder="Enter your favorite celebrity"/>
                     </div>
                     <div class="col-12">
-                        <input type="radio" name="membership" value="basic"> <label for="basic">Basic Membership: $19.99/month, with 5 calls a month</label><br>
-                        <input type="radio" name="membership" value="premium"> <label for="premium">Premium Membership: $49.99/month, with unlimited calls a month</label>
+                        <input type="radio" name="membership" value="basic" /> <label for="basic">Basic Membership: $19.99/month, with 5 calls a month</label><br>
+                        <input type="radio" name="membership" value="premium"/> <label for="premium">Premium Membership: $49.99/month, with unlimited calls a month</label>
                     </div>
 
                     <div class="col-12">
