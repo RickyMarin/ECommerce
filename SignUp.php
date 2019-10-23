@@ -21,6 +21,9 @@
         width: 100%;
         height: 2em;
     }
+    input[type="radio"]:checked+label {
+        font-weight: bold;
+    }
 </style>
 
 <body class="is-preload">
