@@ -14,6 +14,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
+
+<style>
+    input[type=radio] {
+        border: 0px;
+        width: 100%;
+        height: 2em;
+    }
+</style>
+
 <body class="is-preload">
 <div id="page-wrapper">
 
@@ -238,8 +247,8 @@
                                placeholder="Enter your favorite celebrity"/>
                     </div>
                     <div class="col-12">
-                        <input type="radio" name="membership" value="basic"> <label for="basic">Basic Membership: $19.99/month, with 5 calls a month/label><br>
-                        <input type="radio" name="membership" value="premium"> <label for="premium">Premium Membership: $49.99/month, with unlimited calls a month</label><br>
+                        <input type="radio" name="membership" value="basic"> <label for="basic">Basic Membership: $19.99/month, with 5 calls a month</label><br>
+                        <input type="radio" name="membership" value="premium"> <label for="premium">Premium Membership: $49.99/month, with unlimited calls a month</label>
                     </div>
 
                     <div class="col-12">
