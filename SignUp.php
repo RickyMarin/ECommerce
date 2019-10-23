@@ -116,7 +116,7 @@
                 echo "<p align='left'> <font color=red  size='5pt'>Enter a city.</font> </p>";
                 $error = true;
             } else {
-                if (!preg_match("/^[a-zA-Z]*$/", $city)) {
+                if (!preg_match("/^[a-zA-Z ]*$/", $city)) {
                     echo "<font color=red  size='5pt'>You need a proper city.</font> </p>";
                     $error = true;
 
