@@ -45,22 +45,23 @@
 			$query = "SELECT password FROM users WHERE email = '$email'";
 			//echo "test";
 			$result = pg_query($dbconn, $query);
-			$valid = pg_fetch_result($result);
-            while ($row = pg_fetch_row($result)) {
-                $msg .= "password: $row[0]";
-            }
-			if($valid){
+			//$valid = pg_fetch_result($result);
+            $row = pg_fetch_row($result);
+            //while ($row = pg_fetch_row($result)) {
+              //  $msg .= "password: $row[0]";
+            //}
+			if(password_verify($password, $row[0])){
 				header("Location:Celebrities.List.php");
 				//return true;
 			}
 			else{
 				//return false;
-				$msg.= "Incorrect login credentials. Please try again.";
+				$msg = "Incorrect login credentials. Please try again.";
 			}
 			//$msg .= $hashedPassword;
 			//$msg .= " dbPassword: ";
 			//$msg .= $dbPassword;
-			$msg .= $valid;
+			//$msg .= $valid;
 			//if(authenticated())
 			//	redirect('Celebrities.List.php');
 			//else
