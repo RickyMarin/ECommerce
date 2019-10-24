@@ -54,7 +54,7 @@
                 }
             }
             else {
-                    $msg = 'Invalid email address, message ignored.';
+                    $msg = 'Form not complete, message ignored.';
             }
         }
         ?>
