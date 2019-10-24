@@ -26,7 +26,7 @@
         if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
             $mail = new PHPMailer;
             $mail->IsSMTP(); // enable SMTP
-            $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+            $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
             $mail->SMTPAuth = true; // authentication enabled
             $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
             $mail->Host = "smtp.gmail.com";
@@ -64,6 +64,9 @@
             <h2>Contact Us</h2>
             <p>Tell us what you think about our little operation.</p>
         </header>
+        <?php if (!empty($msg)) {
+            echo "<h2>$msg</h2>";
+        } ?>
         <div class="box">
             <form method="post" action="#">
                 <div class="row gtr-50 gtr-uniform">
