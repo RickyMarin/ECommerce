@@ -47,7 +47,7 @@
 			$result = pg_query($dbconn, $query);
 			$valid = pg_fetch_result($result);
             while ($row = pg_fetch_row($result)) {
-                echo "password: $row[0]";
+                $msg .= "password: $row[0]";
             }
 			if($valid){
 				header("Location:Celebrities.List.php");
