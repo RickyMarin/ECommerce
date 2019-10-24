@@ -46,7 +46,7 @@
 			//echo "test";
 			$result = pg_query($dbconn, $query);
 			$valid = pg_fetch_result($result);
-			if(!$valid){
+			if($valid){
 				header("Location:Celebrities.List.php");
 				//return true;
 			}
