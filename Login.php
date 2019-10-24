@@ -55,7 +55,7 @@
 			}
 			else{
 				//return false;
-				$msg= "Incorrect login credentials. Please try again.";
+				$msg.= "Incorrect login credentials. Please try again.";
 			}
 			//$msg .= $hashedPassword;
 			//$msg .= " dbPassword: ";
