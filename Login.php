@@ -53,6 +53,7 @@
 				$msg= "Incorrect login credentials. Please try again.";
 			}
 			$msg .= $hashedPassword;
+			$msg .= " dbPassword: ";
 			$msg .= $dbPassword;
 			//if(authenticated())
 			//	redirect('Celebrities.List.php');
