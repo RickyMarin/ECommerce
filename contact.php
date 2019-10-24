@@ -21,10 +21,10 @@
     <?php
         use PHPMailer\PHPMailer\PHPMailer;
         require 'vendor/autoload.php';
+        $msg = '';
+
         if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
             $mail = new PHPMailer;
-            //Tell PHPMailer to use SMTP - requires a local mail server
-            //Faster and safer than using mail()
             $mail->IsSMTP(); // enable SMTP
             $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
             $mail->SMTPAuth = true; // authentication enabled
@@ -33,25 +33,17 @@
             $mail->Port = 465; // or 587
             $mail->Username = "talk2mecontact@gmail.com";
             $mail->Password = "RickyEldonVivian";
-            //Use a fixed address in your own domain as the from address
-            //**DO NOT** use the submitter's address here as it will be forgery
-            //and will cause your messages to fail SPF checks
             $mail->setFrom('talk2mecontact@gmail.com', 'Talk2Me');
-            //Send the message to yourself, or whoever should receive contact for submissions
             $mail->addAddress('talk2mecontact@gmail.com', 'Talk2Me');
-            //Put the submitter's address in a reply-to header
-            //This will fail if the address provided is invalid,
-            //in which case we should ignore the whole request
+
             if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
                 $mail->Subject = $_POST['subject'];
-                //Keep it simple - don't use HTML
                 $mail->isHTML(false);
-                //Build a simple message body
                 $mail->Body = <<<EOT
                 Email: {$_POST['email']}
                 Name: {$_POST['name']}
                 Message: {$_POST['message']}
-            EOT;
+                EOT;
                 //Send the message, check for errors
                 if (!$mail->send()) {
                     //The reason for failing to send will be in $mail->ErrorInfo
@@ -59,11 +51,11 @@
                     $msg = 'Sorry, something went wrong. Please try again later.';
                 } else {
                     $msg = 'Message sent! Thanks for contacting us.';
-                    }
                 }
+            }
             else {
                     $msg = 'Invalid email address, message ignored.';
-                }
+            }
         }
         ?>
     <!-- Main -->
