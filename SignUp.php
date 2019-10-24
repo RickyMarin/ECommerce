@@ -149,9 +149,9 @@
                 $query = "INSERT INTO users VALUES ('$_POST[name]','$_POST[email]','$_POST[Age]','$_POST[Address]','$_POST[City]','$_POST[State]','$_POST[ZipCode]','$_POST[FavoriteCelebrity]','$hashedPassword', '$_POST[membership]')";
                 $result = pg_query($dbconn, $query);
                 if (!$result) {
-                    echo "You have entered an email that has already been signed up. Please enter a different email.";
+                    echo "<center><h2>You have entered an email that has already been signed up. Please enter a different email.</h2></center>";
                 } else {
-                    echo "Sign up Success! Talk to your favorite celebrity now!";
+                    echo "<center><h2>Sign up Success! Talk to your favorite celebrity now!</h2></center>";
                 }
             }
         }
