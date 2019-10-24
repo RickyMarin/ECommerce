@@ -19,23 +19,7 @@
             $value = htmlspecialchars($value);
             return $value;
         }
-		
-		//function authenticated(){
-		//	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		//		$password = $_POST['Password'];
-		//		$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-		//		$email = makeSafe($_POST["email"]);
-		//		$dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
-		//		$dbPassword = pg_query($dbconn, "SELECT password FROM users WHERE email = '$email'");
-		//		if($hashedPassword == $dbPassword){
-		//			//header("Location: Celebrities.List.php");
-		//			return true;
-		//		}
-		//		else{
-		//			return false;
-		//		}
-		//	 }
-		//}
+        
         $msg = '';
 		if(isset($_POST['email']) && isset($_POST['password'])) {
 			$password = $_POST['password'];
@@ -43,29 +27,15 @@
 			$email = makeSafe($_POST["email"]);
 			$dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
 			$query = "SELECT password FROM users WHERE email = '$email'";
-			//echo "test";
 			$result = pg_query($dbconn, $query);
-			//$valid = pg_fetch_result($result);
             $row = pg_fetch_row($result);
-            //while ($row = pg_fetch_row($result)) {
-              //  $msg .= "password: $row[0]";
-            //}
+
 			if(password_verify($password, $row[0])){
 				header("Location:Celebrities.List.php");
-				//return true;
 			}
 			else{
-				//return false;
 				$msg = "Incorrect login credentials. Please try again.";
 			}
-			//$msg .= $hashedPassword;
-			//$msg .= " dbPassword: ";
-			//$msg .= $dbPassword;
-			//$msg .= $valid;
-			//if(authenticated())
-			//	redirect('Celebrities.List.php');
-			//else
-			//	echo "Incorrect login credentials. Please try again.";
 		}
 	?>
 	<body class="is-preload">
