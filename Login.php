@@ -57,7 +57,7 @@
 			//$msg .= $hashedPassword;
 			//$msg .= " dbPassword: ";
 			//$msg .= $dbPassword;
-			$msg .= $valid;
+			$msg .= $query;
 			//if(authenticated())
 			//	redirect('Celebrities.List.php');
 			//else
