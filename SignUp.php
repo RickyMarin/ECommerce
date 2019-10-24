@@ -158,7 +158,7 @@
 
             $mail = new PHPMailer(); // create a new object
             $mail->IsSMTP(); // enable SMTP
-            $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+            $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
             $mail->SMTPAuth = true; // authentication enabled
             $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
             $mail->Host = "smtp.gmail.com";
@@ -167,8 +167,8 @@
             $mail->Username = "talk2mecontact@gmail.com";
             $mail->Password = "RickyEldonVivian";
             $mail->SetFrom("talk2mecontact@gmail.com");
-            $mail->Subject = "Test";
-            $mail->Body = "hello";
+            $mail->Subject = "Welcome to Talk2Me!";
+            $mail->Body = "Thank you for signing up for Talk2Me! Get ready to begin talking to your favorite celebrities.";
             $mail->AddAddress($_POST["email"]);
             $mail->Send();
             }
