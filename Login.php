@@ -30,7 +30,7 @@
 				header("Location: Celebrities.List.php");
 			}
 			else{
-				echo "Incorrect login credentials. Please try again."
+				echo "Incorrect login credentials. Please try again.";
 			}
 		 }
 	?>
