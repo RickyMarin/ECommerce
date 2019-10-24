@@ -21,7 +21,7 @@
     <?php
         use PHPMailer\PHPMailer\PHPMailer;
         require 'vendor/autoload.php';
-        if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message']){
+        if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
             $mail = new PHPMailer;
             //Tell PHPMailer to use SMTP - requires a local mail server
             //Faster and safer than using mail()
@@ -39,26 +39,27 @@
             //This will fail if the address provided is invalid,
             //in which case we should ignore the whole request
             if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-            $mail->Subject = $_POST['subject'];
-            //Keep it simple - don't use HTML
-            $mail->isHTML(false);
-            //Build a simple message body
-            $mail->Body = <<<EOT
+                $mail->Subject = $_POST['subject'];
+                //Keep it simple - don't use HTML
+                $mail->isHTML(false);
+                //Build a simple message body
+                $mail->Body = <<<EOT
                 Email: {$_POST['email']}
                 Name: {$_POST['name']}
                 Message: {$_POST['message']}
             EOT;
-            //Send the message, check for errors
+                //Send the message, check for errors
                 if (!$mail->send()) {
-                //The reason for failing to send will be in $mail->ErrorInfo
-                //but you shouldn't display errors to users - process the error, log it on your server.
+                    //The reason for failing to send will be in $mail->ErrorInfo
+                    //but you shouldn't display errors to users - process the error, log it on your server.
                     $msg = 'Sorry, something went wrong. Please try again later.';
                 } else {
                     $msg = 'Message sent! Thanks for contacting us.';
+                    }
                 }
-            } else {
-                $msg = 'Invalid email address, message ignored.';
-            }
+            else {
+                    $msg = 'Invalid email address, message ignored.';
+                }
         }
         ?>
     <!-- Main -->
