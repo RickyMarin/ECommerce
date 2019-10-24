@@ -1,30 +1,27 @@
 <?php
-
-/* Namespace alias (don't need Exception this time). */
 use PHPMailer\PHPMailer\PHPMailer;
 
 /* Include the Composer generated autoload.php file. */
 require 'C:\xampp\composer\vendor\autoload.php';
 
-/* Create a new PHPMailer object. */
-$mail = new PHPMailer();
+$mail = new PHPMailer(); // create a new object
+$mail->IsSMTP(); // enable SMTP
+$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+$mail->SMTPAuth = true; // authentication enabled
+$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 587; // or 587
+$mail->IsHTML(true);
+$mail->Username = "talk2mecontact@gmail.com";
+$mail->Password = "RickyEldonVivian";
+$mail->SetFrom("talk2mecontact@gmail.com");
+$mail->Subject = "Test";
+$mail->Body = "hello";
+$mail->AddAddress("vhp7cj@virginia.edu");
 
-/* Set the mail sender. */
-$mail->setFrom('talk2mecontact@gmail.com', 'Talk2Me');
-
-/* Add a recipient. */
-$mail->addAddress('vhp7cj@virginia.edu', 'Vivian');
-
-/* Set the subject. */
-$mail->Subject = 'Force';
-
-/* Set the mail message body. */
-$mail->Body = 'There is a great disturbance in the Force.';
-
-/* Finally send the mail. */
-if (!$mail->send())
-{
-    /* PHPMailer error. */
-    echo $mail->ErrorInfo;
+if(!$mail->Send()) {
+echo "Mailer Error: " . $mail->ErrorInfo;
+} else {
+echo "Message has been sent";
 }
 ?>
