@@ -148,11 +148,12 @@
             }
         }
         ?>
-        use PHPMailer\PHPMailer\PHPMailer;
+
         <?php
+        use PHPMailer\PHPMailer\PHPMailer;
         if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['Password']) && isset($_POST['Address'])
             && isset($_POST['City']) && isset($_POST['State']) && isset($_POST['ZipCode']) && isset($_POST['Age'])
-            && isset($_POST['FavoriteCelebrity']) && isset($_POST['membership'])) 
+            && isset($_POST['FavoriteCelebrity']) && isset($_POST['membership'])) {
             require 'vendor/autoload.php';
 
             $mail = new PHPMailer(); // create a new object
@@ -169,8 +170,8 @@
             $mail->Subject = "Test";
             $mail->Body = "hello";
             $mail->AddAddress($_POST["email"]);
-            $mail->Send()
-
+            $mail->Send();
+            }
         ?>
         <div class="box">
             <form id="insert" name="insert" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
