@@ -45,7 +45,8 @@
 			$query = "SELECT * FROM users WHERE email = '$email' AND password = '$hashedPassword'";
 			//echo "test";
 			$result = pg_query($dbconn, $query);
-			if($result){
+			$valid = pg_fetch_all($result);
+			if($valid){
 				header("Location:Celebrities.List.php");
 				//return true;
 			}
