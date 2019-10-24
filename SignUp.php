@@ -148,8 +148,32 @@
             }
         }
         ?>
+        use PHPMailer\PHPMailer\PHPMailer;
+        <?php
+        if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['Password']) && isset($_POST['Address'])
+            && isset($_POST['City']) && isset($_POST['State']) && isset($_POST['ZipCode']) && isset($_POST['Age'])
+            && isset($_POST['FavoriteCelebrity']) && isset($_POST['membership'])) 
+            require 'vendor/autoload.php';
+
+            $mail = new PHPMailer(); // create a new object
+            $mail->IsSMTP(); // enable SMTP
+            $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+            $mail->SMTPAuth = true; // authentication enabled
+            $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+            $mail->Host = "smtp.gmail.com";
+            $mail->Port = 465; // or 587
+            $mail->IsHTML(true);
+            $mail->Username = "talk2mecontact@gmail.com";
+            $mail->Password = "RickyEldonVivian";
+            $mail->SetFrom("talk2mecontact@gmail.com");
+            $mail->Subject = "Test";
+            $mail->Body = "hello";
+            $mail->AddAddress($_POST["email"]);
+            $mail->Send()
+
+        ?>
         <div class="box">
-            <form id="insert" name="insert" action="email.php"
+            <form id="insert" name="insert" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                   method="POST">
                 <div class="row gtr-50 gtr-uniform">
                     <div class="col-6 col-12-mobilep">
