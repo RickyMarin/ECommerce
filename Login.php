@@ -70,7 +70,7 @@
 					<p>Enter your username and password to begin chatting with your favorite celebrities!</p>
 				</header>
 				<div class="box">
-					<form method="post" action="Login.php">
+					<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 						<div class="row gtr-50 gtr-uniform">
 							<div class="col-12">
 								<input type="text" name="email" id="email" value="" placeholder="Email" />
