@@ -28,6 +28,7 @@
 			$dbPassword = pg_query($dbconn, "SELECT password FROM users WHERE email = '$email'");
 			if($hashedPassword == $dbPassword){
 				header("Location: Celebrities.List.php");
+				echo "Login success!";
 			}
 			else{
 				echo "Incorrect login credentials. Please try again.";
