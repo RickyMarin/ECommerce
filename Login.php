@@ -42,9 +42,9 @@
 			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 			$email = makeSafe($_POST["email"]);
 			$dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
-			$dbPassword = pg_query($dbconn, "SELECT name FROM users WHERE email = '$email'");
-			echo "test";
-			if($hashedPassword == $dbPassword){
+			$query = pg_query($dbconn, "SELECT count(*) FROM users WHERE email = '$email' AND password = '$hashedPassword'");
+			//echo "test";
+			if($query == 1){
 				header("Location:Celebrities.List.php");
 				//return true;
 			}
