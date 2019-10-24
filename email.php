@@ -16,9 +16,5 @@ $mail->SetFrom("talk2mecontact@gmail.com");
 $mail->Subject = "Test";
 $mail->Body = "hello";
 $mail->AddAddress("vhp7cj@virginia.edu");
-if(!$mail->Send()) {
-    echo "Mailer Error: " . $mail->ErrorInfo;
-} else {
-    echo "Message has been sent";
-}
+$mail->Send()
 ?>
