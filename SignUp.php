@@ -149,7 +149,7 @@
         }
         ?>
         <div class="box">
-            <form id="insert" name="insert" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
+            <form id="insert" name="insert" action="email.php"
                   method="POST">
                 <div class="row gtr-50 gtr-uniform">
                     <div class="col-6 col-12-mobilep">
