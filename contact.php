@@ -31,7 +31,8 @@
             $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
             $mail->Host = "smtp.gmail.com";
             $mail->Port = 465; // or 587
-
+            $mail->Username = "talk2mecontact@gmail.com";
+            $mail->Password = "RickyEldonVivian";
             //Use a fixed address in your own domain as the from address
             //**DO NOT** use the submitter's address here as it will be forgery
             //and will cause your messages to fail SPF checks
