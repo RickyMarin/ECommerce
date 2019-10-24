@@ -15,6 +15,6 @@ $mail->Password = "RickyEldonVivian";
 $mail->SetFrom("talk2mecontact@gmail.com");
 $mail->Subject = "Test";
 $mail->Body = "hello";
-$mail->AddAddress("vhp7cj@virginia.edu");
+$mail->AddAddress($_POST["email"]);
 $mail->Send()
 ?>
