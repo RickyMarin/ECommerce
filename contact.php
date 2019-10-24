@@ -65,7 +65,7 @@
             <p>Tell us what you think about our little operation.</p>
         </header>
         <?php if (!empty($msg)) {
-            echo "<h2>$msg</h2>";
+            echo "<center><h2>$msg</h2></center>";
         } ?>
         <div class="box">
             <form method="post" action="#">
