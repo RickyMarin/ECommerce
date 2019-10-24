@@ -12,6 +12,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+	 <?php
+        $dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
+        function makeSafe($value)
+        {
+            $value = htmlspecialchars($value);
+            return $value;
+        }
+		
+		 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			$password = $_POST['Password'];
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+			$email = makeSafe($_POST["email"]);
+			$dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
+			$dbPassword = pg_query($dbconn, "SELECT password FROM users WHERE email = '$email'");
+			if($hashedPassword == $dbPassword){
+				header("Location: Celebrities.List.php");
+			}
+			else{
+				echo "Incorrect login credentials. Please try again.";
+			}
+		 }
+	?>
 	<body class="is-preload">
 		<div id="page-wrapper">
 
@@ -27,10 +49,10 @@
 					<form method="post" action="#">
 						<div class="row gtr-50 gtr-uniform">
 							<div class="col-12">
-								<input type="text" name="Username" id="username" value="" placeholder="Username" />
+								<input type="text" name="email" id="email" value="" placeholder="Email" />
 							</div>
 							<div class="col-12">
-								<input type="text" name="Password" id="password" value="" placeholder="Password" />
+								<input type="text" name="password" id="password" value="" placeholder="Password" />
 							</div>
 							<div class="col-12">
 								<ul class="actions special">
