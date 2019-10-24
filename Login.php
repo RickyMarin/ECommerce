@@ -20,28 +20,41 @@
             return $value;
         }
 		
-		function authenticated(){
-			if ($_SERVER["REQUEST_METHOD"] == "POST") {
-				$password = $_POST['Password'];
-				$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-				$email = makeSafe($_POST["email"]);
-				$dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
-				$dbPassword = pg_query($dbconn, "SELECT password FROM users WHERE email = '$email'");
-				if($hashedPassword == $dbPassword){
-					//header("Location: Celebrities.List.php");
-					return true;
-				}
-				else{
-					return false;
-				}
-			 }
-		}
+		//function authenticated(){
+		//	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		//		$password = $_POST['Password'];
+		//		$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+		//		$email = makeSafe($_POST["email"]);
+		//		$dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
+		//		$dbPassword = pg_query($dbconn, "SELECT password FROM users WHERE email = '$email'");
+		//		if($hashedPassword == $dbPassword){
+		//			//header("Location: Celebrities.List.php");
+		//			return true;
+		//		}
+		//		else{
+		//			return false;
+		//		}
+		//	 }
+		//}
 		
 		if(isset($_POST['Login'])){
-			if(authenticated())
-				redirect('Celebrities.List.php');
-			else
+			$password = $_POST['Password'];
+			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+			$email = makeSafe($_POST["email"]);
+			$dbconn = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com port=5432 dbname=d8k5ke2dtvb9ue user=lkoloaarfawvjm password=adfffbf2c20b090912c5ffe90c7fc1e3d82b0af7dd240dc20b51dac2d7a89703");
+			$dbPassword = pg_query($dbconn, "SELECT password FROM users WHERE email = '$email'");
+			if($hashedPassword == $dbPassword){
+				header("Location:Celebrities.List.php");
+				//return true;
+			}
+			else{
+				//return false;
 				echo "Incorrect login credentials. Please try again.";
+			}
+			//if(authenticated())
+			//	redirect('Celebrities.List.php');
+			//else
+			//	echo "Incorrect login credentials. Please try again.";
 		}
 	?>
 	<body class="is-preload">
