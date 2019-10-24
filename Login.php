@@ -36,7 +36,7 @@
 		//		}
 		//	 }
 		//}
-		
+        $msg = '';
 		if(isset($_POST['email']) && isset($_POST['password'])) {
 			$password = $_POST['password'];
 			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -50,7 +50,7 @@
 			}
 			else{
 				//return false;
-				echo "Incorrect login credentials. Please try again.";
+				$msg= "Incorrect login credentials. Please try again.";
 			}
 			//if(authenticated())
 			//	redirect('Celebrities.List.php');
@@ -69,6 +69,9 @@
 					<h2>Login Here!</h2>
 					<p>Enter your username and password to begin chatting with your favorite celebrities!</p>
 				</header>
+                <?php if (!empty($msg)) {
+                    echo "<center><h2>$msg</h2></center>";
+                } ?>
 				<div class="box">
 					<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 						<div class="row gtr-50 gtr-uniform">
