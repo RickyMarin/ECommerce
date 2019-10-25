@@ -40,9 +40,8 @@
             <div class="box">
                 <style>
                     .oneline {
-                     width: 350px;
+                     width: 300px;
                      height: 100px;
-                     border: solid 1px #ccc;
                      display: inline-block;
                     }
                 </style>
@@ -66,6 +65,7 @@
                             <label for="datetime">Date and time desired for call:</label>
                             <input type="datetime-local" name="datetime" id="datetime" value=""/>
                         </div>
+                        <input type="submit" value="Schedule now!"/>
                     </form>
                 </div>
             </div>
