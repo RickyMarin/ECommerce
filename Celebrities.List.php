@@ -31,6 +31,8 @@
             $mail->Body = "Thank you for setting up your appointment with " . $_POST['celebrity'] . " on " . $_POST['datetime'] . "! A representative will reach out soon to confirm the call.";
             $mail->AddAddress($_POST["email"]);
             $mail->Send();
+            
+            echo "<center>Appointment has been set! A representative of " . $_POST['celebrity'] . " will reach out shortly to confirm the call.";
             }
         ?>
         
