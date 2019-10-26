@@ -51,7 +51,7 @@
                     #submit {display:inline-block;} */
                 </style>
                 <?php if (!empty($msg)) {
-                    echo "<center><h2>$msg</h2></center>";
+                    echo "<center><h3>$msg</h3></center>";
                 } ?>
                 <h2>The following celebrities can currently be scheduled:</h2>
                 <div class="us">
