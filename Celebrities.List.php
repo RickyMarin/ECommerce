@@ -71,7 +71,7 @@
                         </div>
                         <div class="oneline">
                             <label for="datetime">Date and time desired for call:</label>
-                            <input type="datetime-local" name="datetime" id="datetime" value="" min=2019-10-25T00:00 max=2025-12-31T23:59/>
+                            <input type="datetime-local" name="datetime" id="datetime" value="" min="<?php echo date('Y-m-d\TH:i:sP', $row['Time']); ?>" max="2025-12-31T23:59"/>
                         </div>
                         <input type="submit" value="Schedule now!" id="submit"/>
                         <input type="hidden" id="celebrity" name="celebrity" value="Tina Fey"/>

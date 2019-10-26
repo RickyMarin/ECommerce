@@ -59,7 +59,7 @@
 								<input type="text" name="email" id="email" value="" placeholder="Email" />
 							</div>
 							<div class="col-12">
-								<input type="text" name="password" id="password" value="" placeholder="Password" />
+								<input type="password" name="password" id="password" value="" placeholder="Password" />
 							</div>
 							<div class="col-12">
 								<ul class="actions special">
