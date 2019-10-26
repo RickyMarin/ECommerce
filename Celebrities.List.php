@@ -32,7 +32,7 @@
             $mail->AddAddress($_POST["email"]);
             $mail->Send();
             
-            echo "<center><h2>Appointment has been set! A representative of " . $_POST['celebrity'] . " will reach out shortly to confirm the call.</h2></center>";
+            $msg = "Appointment has been set! A representative of " . $_POST['celebrity'] . " will reach out shortly to confirm the call.";
             }
         ?>
         
@@ -50,6 +50,9 @@
                     #datetime {display:inline-block;margin-right:10px;} 
                     #submit {display:inline-block;} */
                 </style>
+                <?php if (!empty($msg)) {
+                    echo "<center><h2>$msg</h2></center>";
+                } ?>
                 <h2>The following celebrities can currently be scheduled:</h2>
                 <div class="us">
                     <img src="Tinay Fey.jpeg" alt="Tina Fey" width="180" height="180" align="left" margin-right:10px>
