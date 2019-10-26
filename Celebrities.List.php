@@ -45,6 +45,10 @@
                      display: inline-block;
                      margin-right:10px;
                     }
+                    
+                    .h3{
+                        color:blue;
+                    }
                     /*#name {display:inline-block;margin-right:10px;}
                     #email {display:inline-block;margin-right:10px;}
                     #datetime {display:inline-block;margin-right:10px;} 
