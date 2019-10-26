@@ -32,7 +32,7 @@
             $mail->AddAddress($_POST["email"]);
             $mail->Send();
             
-            echo "<center>Appointment has been set! A representative of " . $_POST['celebrity'] . " will reach out shortly to confirm the call.";
+            echo "<center><h2>Appointment has been set! A representative of " . $_POST['celebrity'] . " will reach out shortly to confirm the call.</h2></center>";
             }
         ?>
         
