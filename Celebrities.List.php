@@ -65,7 +65,7 @@
                             <input type="datetime-local" name="datetime" id="datetime" value=""/>
                         </div>
                         <input type="submit" value="Schedule now!" id="submit"/>
-                        <input type="hidden" id="celebrity" value="Tina Fey"/>
+                        <input type="hidden" id="celebrity" name="celebrity" value="Tina Fey"/>
                     </form>
                 </div>
             </div>
