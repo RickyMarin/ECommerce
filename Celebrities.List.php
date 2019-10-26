@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="icon" href="images/favicon.ico" type="image/ico">
-        <title>Login Page</title>
+        <title>Celebrities List</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="assets/css/main.css"/>
@@ -46,7 +46,7 @@
                      margin-right:10px;
                     }
                     
-                    .h3{
+                    h3{
                         color:blue;
                     }
                     /*#name {display:inline-block;margin-right:10px;}
