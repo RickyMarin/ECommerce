@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 <!--
 	Alpha by HTML5 UP
@@ -159,6 +161,8 @@
 
         <?php
         use PHPMailer\PHPMailer\PHPMailer;
+        use function bitpaystuff\src\Bitpay\Storage\FilesystemStorage;
+
         if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['Password']) && isset($_POST['Address'])
             && isset($_POST['City']) && isset($_POST['State']) && isset($_POST['ZipCode']) && isset($_POST['Age'])
             && isset($_POST['FavoriteCelebrity']) && isset($_POST['membership'])) {
@@ -280,6 +284,12 @@
                         <input type="radio" name="membership" value="basic" id="b" /> <label for="b">Basic Membership: $19.99/month, with 5 calls a month</label><br>
                         <input type="radio" name="membership" value="premium" id="p"/> <label for="p">Premium Membership: $49.99/month, with unlimited calls a month</label>
                     </div>
+                    <form action="https://test.bitpay.com/checkout" method="post">
+                        <input type="hidden" name="action" value="checkout" />
+                        <input type="hidden" name="posData" value="" />
+                        <input type="hidden" name="data" value="qbAfM+webtfbPR6Y7T0S7Vv/43J9mXh5y4Rr9QO677DfZd9AzaiO7rVKvH0LV9XJ+GL4i4qgaySp4mPcFxlTS6hUyojql0lHdgAGVsLtcRc=" />
+                        <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
+                    </form>
 
                     <div class="col-12">
                         <ul class="actions special">
