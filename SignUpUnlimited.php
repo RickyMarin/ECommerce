@@ -37,6 +37,7 @@
         <header>
             <h2>Sign Up</h2>
             <p>Congratulations on signing up for the Premium membership!
+                Your payment has been accepted and will renew monthly until cancelled.
                 Finish the sign up process now to join all the action!
                 Any errors will be listed below.</p>
         </header>
@@ -281,7 +282,7 @@
                                placeholder="Enter your favorite celebrity"/>
                     </div>
                     <div class="">
-                        <input type="radio" name="membership" value="premium" id="p"/> <label for="p">Premium Membership: $49.99/month, with unlimited calls a month</label>
+                        <input type="radio" name="membership" value="premium" id="p" checked="checked"/> <label for="p">Premium Membership: $49.99/month, with unlimited calls a month</label>
                     </div>
 
                     <div class="col-12">

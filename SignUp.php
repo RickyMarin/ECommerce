@@ -1,9 +1,9 @@
 <html>
 <head>
     <link rel="icon" href="images/favicon.ico" type="image/ico">
-    <title>About Us</title>
+    <title>Payment Options</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=5, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
@@ -45,14 +45,7 @@
         border-top: none;
     }
 
-    .us {
-        background-color: lightgray;
-        color: white;
-        margin: 10px;
-        padding: 30px;
-        height: 250px;
-        vertical-align: middle;
-    }
+
 </style>
 
 <body class="is-preload">
@@ -98,23 +91,22 @@
             <button class="tablink" onclick="openPage(event,'What is')" id="defaultOpen">Premium Membership!</button>
             <button class="tablink" onclick="openPage(event,'Who')">Basic Membership</button>
             <div id="What is" class="tabcontent">
-                <div class="box">
+                    <div class="box">
                     <h3>Unlimited Plan!</h3>
-                    <p>At only $49.99 a month, you can make unlimited calls with all of our celebrities! Get expedited support with 4K video support (as supported).  </p><form action="https://test.bitpay.com/checkout" method="post">
+                    <p>At only $49.99 a month, you can make unlimited calls with all of our celebrities! Get expedited support with 4K video support (as supported). Video playback will be also be up to 4K (as supported). You will have access to our priority support line. Renews Monthly.  </p><form action="https://test.bitpay.com/checkout" method="post">
                         <input type="hidden" name="action" value="checkout" />
                         <input type="hidden" name="posData" value="" />
                         <input type="hidden" name="data" value="qbAfM+webtfbPR6Y7T0S7Vv/43J9mXh5y4Rr9QO677Cr+B2I5FmhSD5DZNxZlhHxmoR99b5EGYmqrENjxKStaB13t514RJtMqCtwmmsPYO2biLeMJ7XiMH2BEqYMDaPw6CyfVlkPZaZ01QFSpgN5Ns46CpO4/rD4TATbNqYhfgq1jZsEHQaS/V5O9N1PJ5uq" />
                         <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
                     </form>
-
                     </div>
-                </div>
+                <img src="thanks.jpeg" width="612" height="180" >
             </div>
 
             <div id="Who" class="tabcontent">
                 <div class="box">
                 <h3>Starter Plan</h3>
-                <p>With our basic membership, you can make up to 5 calls a month to our vast number of celebrities. 4K support is not included in this plan.    </p>
+                <p>With our basic membership, you can make up to 5 calls a month to our vast number of celebrities. 4K support is not included in this plan. Included in this plan is standard video playback from all of your calls! This plan is $19.99 a month. Also included is our basic technical support. Renews Monthly.</p>
                     <form action="https://test.bitpay.com/checkout" method="post">
                         <input type="hidden" name="action" value="checkout" />
                         <input type="hidden" name="posData" value="" />
@@ -122,6 +114,7 @@
                         <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
                     </form>
                 </div>
+                <img src="thanks.jpeg" width="612" height="180" >
             </div>
     </section>
 
@@ -150,7 +143,7 @@
 
 
 </div>
-<?php include("footer.php"); ?>
+
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.dropotron.min.js"></script>

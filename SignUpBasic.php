@@ -37,6 +37,7 @@
         <header>
             <h2>Sign Up</h2>
             <p>Congratulations on signing up for the basic membership!
+                Your payment has been accepted and will renew monthly until cancelled.
                 Finish the sign up process now to join all the action!
                 Any errors will be listed below.</p>
         </header>
@@ -281,7 +282,7 @@
                                placeholder="Enter your favorite celebrity"/>
                     </div>
                     <div class="">
-                        <input type="radio" name="membership" value="basic" id="b" /> <label for="b">Basic Membership: $19.99/month, with 5 calls a month</label><br>
+                        <input type="radio" name="membership" value="basic" id="b" checked="checked"/> <label for="b">Basic Membership: $19.99/month, with 5 calls a month</label><br>
                     </div>
 
                     <div class="col-12">
