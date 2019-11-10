@@ -31,6 +31,8 @@
             $row = pg_fetch_row($result);
 
 			if(password_verify($password, $row[0])){
+			    session_start();
+			    $_SESSION['logged_in']=true;
 				header("Location:Celebrities.List.php");
 			}
 			else{

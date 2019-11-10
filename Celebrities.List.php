@@ -9,7 +9,13 @@
     </head>
     
     <body class="is-preload">
-        <?php include("LoggedInHeader.php"); ?>
+    <?php
+   if(empty($_SESSION)){
+       header("Location: Signup.php");
+   }
+    ?>
+
+    <?php include("LoggedInHeader.php"); ?>
         
         <?php
         use PHPMailer\PHPMailer\PHPMailer;

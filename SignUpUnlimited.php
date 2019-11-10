@@ -155,7 +155,9 @@
                 if (!$result) {
                     echo "<center><h2>You have entered an email that has already been signed up. Please enter a different email.</h2></center>";
                 } else {
-                    echo "<center><h2>Sign up Success! Talk to your favorite celebrity now!</h2></center>";
+                    session_start();
+                    $_SESSION['logged_in']=true;
+                    header("Location:Celebrities.List.php");
                 }
             }
         }

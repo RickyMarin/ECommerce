@@ -10,7 +10,9 @@
 		<header id="header">
             <a class="image-link"><img src="images/logo.png" width="100" height="100"></a>
 			<nav id="nav">
-                <a href="index.php" class="button">Log out</a>
+                <form action="/logout.php">
+                    <input type="button" id="logout" value="logout" name="logout">
+                </form>
 			</nav>
 		</header>
 	</body>
