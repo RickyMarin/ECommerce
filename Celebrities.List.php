@@ -10,7 +10,8 @@
     
     <body class="is-preload">
     <?php
-   if(session_id()==''||!isset($_SESSION)){
+    session_start();
+   if(!isset($_SESSION['logged_in'])){
        header("Location: SignUp.php");
    }
     ?>
