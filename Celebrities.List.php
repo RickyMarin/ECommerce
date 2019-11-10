@@ -11,7 +11,7 @@
     <body class="is-preload">
     <?php
    if(empty($_SESSION)){
-       header("Location: Signup.php");
+       header("Location: SignUp.php");
    }
     ?>
 
