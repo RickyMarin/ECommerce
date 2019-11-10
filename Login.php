@@ -19,6 +19,10 @@
             $value = htmlspecialchars($value);
             return $value;
         }
+        session_start();
+        if(isset($_SESSION['logged_in'])){
+            header("Location:Celebrities.List.php");
+        }
         
         $msg = '';
 		if(isset($_POST['email']) && isset($_POST['password'])) {
