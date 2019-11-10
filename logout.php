@@ -1,4 +1,7 @@
 <?php
 session_start();
 session_destroy();
-header("Location:index.php");
+if(!isset($_SESSION['logged_in'])){
+    header("Location: Login.php");
+}
+?>
