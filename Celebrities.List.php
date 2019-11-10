@@ -10,7 +10,7 @@
     
     <body class="is-preload">
     <?php
-   if(empty($_SESSION)){
+   if(!isset($_SESSION['logged_in'])){
        header("Location: SignUp.php");
    }
     ?>
