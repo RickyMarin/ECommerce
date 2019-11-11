@@ -56,6 +56,9 @@
     session_start();
     if(isset($_SESSION['logged_in'])){
         header("Location:Celebrities.List.php");
+    }
+    if($_SESSION['Promo']){
+        header("Location:SignUpPromo.php");
     }?>
 
     <!-- Main -->
@@ -137,12 +140,9 @@
 
     <?php
     session_start();
-    if(isset($_POST['Promo'])){
-        header('location:index.php');
-    }
     if ($_POST['Promo']=="test123"){
         $_SESSION['Promo']=true;
-        header('location:SignUpPromo.php');
+        header('Location:SignUpPromo.php');
     }
     else{
         echo"Invalid Promo Code";

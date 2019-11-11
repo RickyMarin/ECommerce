@@ -12,7 +12,7 @@
     <?php
     session_start();
    if(!isset($_SESSION['logged_in'])){
-       header("Location: SignUp.php");
+       header("Location:SignUp.php");
    }
     ?>
 
