@@ -19,6 +19,10 @@
             $value = htmlspecialchars($value);
             return $value;
         }
+        session_start();
+        if(isset($_SESSION['logged_in'])){
+            header("Location:Celebrities.List.php");
+        }
         
         $msg = '';
 		if(isset($_POST['email']) && isset($_POST['password'])) {
@@ -31,6 +35,8 @@
             $row = pg_fetch_row($result);
 
 			if(password_verify($password, $row[0])){
+			    session_start();
+			    $_SESSION['logged_in']=true;
 				header("Location:Celebrities.List.php");
 			}
 			else{

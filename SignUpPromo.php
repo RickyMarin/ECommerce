@@ -54,12 +54,11 @@
     <!-- Header -->
     <?php include("header.php");
     session_start();
-    if(isset($_SESSION['logged_in'])){
-        header("Location:Celebrities.List.php");
+    if(!isset($_SESSION['Promo'])){
+        header('Location:SignUp.php');
     }
-    if($_SESSION['Promo']){
-        header("Location:SignUpPromo.php");
-    }?>
+
+    ?>
 
     <!-- Main -->
     <script>
@@ -93,61 +92,26 @@
     </script>
 
     <section id="main" class="container">
-        <h2 style="text-align:center;">Payment Options</h2>
+        <h2 style="text-align:center;">Payment Options with your Promo Code!</h2>
         <div class="tab">
             <button class="tablink" onclick="openPage(event,'What is')" id="defaultOpen">Premium Membership!</button>
-            <button class="tablink" onclick="openPage(event,'Who')">Basic Membership</button>
-            <button class="tablink" onclick="openPage(event,'Promo')">Have a Promo?</button>
             <div id="What is" class="tabcontent">
                     <div class="box">
                     <h3>Unlimited Plan!</h3>
-                    <p>At only $49.99 a month, you can make unlimited calls with all of our celebrities! Get expedited support with 4K video support (as supported). Video playback will be also be up to 4K (as supported). You will have access to our priority support line. Renews Monthly.  </p><form action="https://test.bitpay.com/checkout" method="post">
-                        <input type="hidden" name="action" value="checkout" />
-                        <input type="hidden" name="posData" value="" />
-                        <input type="hidden" name="data" value="qbAfM+webtfbPR6Y7T0S7Vv/43J9mXh5y4Rr9QO677Cr+B2I5FmhSD5DZNxZlhHxmoR99b5EGYmqrENjxKStaB13t514RJtMqCtwmmsPYO2biLeMJ7XiMH2BEqYMDaPw6CyfVlkPZaZ01QFSpgN5Ns46CpO4/rD4TATbNqYhfgq1jZsEHQaS/V5O9N1PJ5uq" />
-                        <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
-                    </form>
+                    <p>At only $24.99 a month, you can make unlimited calls with all of our celebrities! Get expedited support with 4K video support (as supported). Video playback will be also be up to 4K (as supported). You will have access to our priority support line. Renews Monthly.
+                        <form action="https://test.bitpay.com/checkout" method="post">
+                            <input type="hidden" name="action" value="checkout" />
+                            <input type="hidden" name="posData" value="" />
+                            <input type="hidden" name="data" value="qbAfM+webtfbPR6Y7T0S7Vv/43J9mXh5y4Rr9QO677ASFC1PcSi4uTOb2rFKbGDN9Z9jvrwLHxg9honMVKVJeBSctDbLKYTlmyDgKM8rdbuvDZIsiJFUiPRbhJxWosY4OBjFlXrcFvoSNYATII0/YUF1N70sgbRjhSSWarMHI8T+LAn8gdQLCr4L5ip6movy" />
+                            <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
+                        </form>
                     </div>
                 <img src="thanks.jpeg" width="612" height="180" >
             </div>
 
-            <div id="Who" class="tabcontent">
-                <div class="box">
-                <h3>Starter Plan</h3>
-                <p>With our basic membership, you can make up to 5 calls a month to our vast number of celebrities. 4K support is not included in this plan. Included in this plan is standard video playback from all of your calls! This plan is $19.99 a month. Also included is our basic technical support. Renews Monthly.</p>
-                    <form action="https://test.bitpay.com/checkout" method="post">
-                        <input type="hidden" name="action" value="checkout" />
-                        <input type="hidden" name="posData" value="" />
-                        <input type="hidden" name="data" value="qbAfM+webtfbPR6Y7T0S7Vv/43J9mXh5y4Rr9QO677BRYXpJpCGKrt7MAX+d4Ke99W/Txg2ZbUd9fl+L7qPShM6WlM6yMbQ0DVU/IJwgrcO+3c5HPzhER9nGEmF5vYuxDHyVvkjG7YW80QqKaDDPQqaN/tZQfdFdqBf0UGILVP9lCu7aPG2DIbsM7WuyxtQl" />
-                        <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
-                    </form>
-                </div>
-                <img src="thanks.jpeg" width="612" height="180" >
-            </div>
-            <div id="Promo" class="tabcontent">
-                <div class="box">
-                    <h3>Have a Promo? Enter it below!</h3>
-
-                    <form id="insert" name="insert" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                        <input type="text" name="Promo" id="Promo"
-                               placeholder="Enter your Promo Code"/>
-                    <li><input type="submit" value="Submit" /></li>
-                    </form>
-                </div>
-                <img src="thanks.jpeg" width="612" height="180" >
-            </div>
     </section>
 
-    <?php
-    session_start();
-    if ($_POST['Promo']=="test123"){
-        $_SESSION['Promo']=true;
-        header('Location:SignUpPromo.php');
-    }
-    else{
-        echo"Invalid Promo Code";
-    }
-    ?>
+
     <!-- Footer -->
     <?php include("footer.php"); ?>
 

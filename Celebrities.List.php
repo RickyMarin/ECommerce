@@ -9,7 +9,14 @@
     </head>
     
     <body class="is-preload">
-        <?php include("LoggedInHeader.php"); ?>
+    <?php
+    session_start();
+   if(!isset($_SESSION['logged_in'])){
+       header("Location:SignUp.php");
+   }
+    ?>
+
+    <?php include("LoggedInHeader.php"); ?>
         
         <?php
         use PHPMailer\PHPMailer\PHPMailer;
@@ -49,17 +56,22 @@
                     h3{
                         color:blue;
                     }
-                    /*#name {display:inline-block;margin-right:10px;}
-                    #email {display:inline-block;margin-right:10px;}
-                    #datetime {display:inline-block;margin-right:10px;} 
-                    #submit {display:inline-block;} */
+
+                    .us {
+                        background-color: lightgray;
+                        color: white;
+                        margin: 10px;
+                        padding: 30px;
+                        height: 350px;
+                        vertical-align: middle;
+                    }
                 </style>
                 <?php if (!empty($msg)) {
                     echo "<center><h3>$msg</h3></center>";
                 } ?>
                 <h2>The following celebrities can currently be scheduled:</h2>
                 <div class="us">
-                    <img src="Tinay Fey.jpeg" alt="Tina Fey" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Tinay Fey.jpeg" alt="Tina Fey" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Tina Fey</h3>
 					<h4 style="text-align:left">Actress</h4>
 					<p style="text-align:left; color:black">Tina Fey is an American actress, comedian, writer, producer, and playwright. She is best known for her work on the NBC sketch comedy series Saturday Night Live and for creating the acclaimed comedy series 30 Rock and Unbreakable Kimmy Schmidt.</p>
@@ -78,7 +90,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Tony Bennett.jpg" alt="Tony Bennett" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Tony Bennett.jpg" alt="Tony Bennett" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Tony Bennett</h3>
 					<h4 style="text-align:left">Basketball Coach</h4>
 					<p style="text-align:left; color:black">Tony Bennett is an American basketball coach and former player. He has been the head men's basketball coach at the University of Virginia since March 31, 2009.</p>
@@ -97,7 +109,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Taylor Swift.jpg" alt="Taylor Swift" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Taylor Swift.jpg" alt="Taylor Swift" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Taylor Swift</h3>
 					<h4 style="text-align:left">Singer</h4>
 					<p style="text-align:left; color:black">Taylor Swift is an American singer-songwriter. She is known for narrative songs about her personal life, which have received widespread media coverage.</p>
@@ -116,7 +128,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Bazzi.jpg" alt="Bazzi" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Bazzi.jpg" alt="Bazzi" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Bazzi</h3>
 					<h4 style="text-align:left">Singer</h4>
 					<p style="text-align:left; color:black">Bazzi is an American singer, songwriter, rapper and record producer. His song "Mine", released in October 2017, gained popularity in early 2018 when it became a meme through the use of a Snapchat lens filter featuring the song.</p>
@@ -135,7 +147,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Kyle Guy.jpg" alt="Kyle Guy" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Kyle Guy.jpg" alt="Kyle Guy" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Kyle Guy</h3>
 					<h4 style="text-align:left">Basketball Player</h4>
 					<p style="text-align:left; color:black">Kyle Guy is an American professional basketball player for the Sacramento Kings of the National Basketball Association. He played college basketball for the Virginia Cavaliers.</p>
@@ -154,7 +166,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Ricky Martin.jpeg" alt="Ricky Martin" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Ricky Martin.jpeg" alt="Ricky Martin" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Ricky Martin</h3>
 					<h4 style="text-align:left">Singer</h4>
 					<p style="text-align:left; color:black">Ricky Martin is a Puerto Rican singer, actor and author who is widely regarded as the "King of Latin Pop".</p>
@@ -173,7 +185,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Alfred Weaver.jpg" alt="Alfred Weaver" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Alfred Weaver.jpg" alt="Alfred Weaver" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Alf Weaver</h3>
 					<h4 style="text-align:left">Professor</h4>
 					<p style="text-align:left; color:black">Alf Weaver received his Ph.D. in Computer Science from the University of Illinois in 1976. He joined the University of Virginia in 1977 and is now Professor of Computer Science, Chair of the UVA Faculty Senate, and Founding Director of UVA’s Applied Research Institute.</p>
@@ -192,7 +204,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Axel Gunnarsson.jpg" alt="Axel Gunnarsson" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Axel Gunnarsson.jpg" alt="Axel Gunnarsson" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Axel Gunnarsson</h3>
 					<h4 style="text-align:left">Soccer Player</h4>
 					<p style="text-align:left; color:black">Axel Gunnarsson is a Swedish soccer player who currently plays for the University of Virginia.</p>
@@ -211,7 +223,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Katy Perry.jpg" alt="Katy Perry" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Katy Perry.jpg" alt="Katy Perry" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Katy Perry</h3>
 					<h4 style="text-align:left">Singer</h4>
 					<p style="text-align:left; color:black">Katy Perry, is an American singer, songwriter and television judge.</p>
@@ -230,7 +242,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Sandra Oh.jpg" alt="Sandra Oh" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Sandra Oh.jpg" alt="Sandra Oh" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Sandra Oh</h3>
 					<h4 style="text-align:left">Actress</h4>
 					<p style="text-align:left; color:black">Sandra Oh is a Canadian-American actress. She is best known for her roles as Cristina Yang on the ABC medical drama series Grey's Anatomy and Eve Polastri in the BBC America spy thriller series Killing Eve.</p>
@@ -249,7 +261,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Ty Jerome.jpg" alt="Ty Jerome" width="180" height="180" align="left" margin-right:10px>
+                    <img src="Ty Jerome.jpg" alt="Ty Jerome" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Ty Jerome</h3>
 					<h4 style="text-align:left">Basketball Player</h4>
 					<p style="text-align:left; color:black">Ty Jerome is an American professional basketball player for the Phoenix Suns of the National Basketball Association. He played college basketball for the Virginia Cavaliers.</p>
