@@ -56,10 +56,15 @@
                     h3{
                         color:blue;
                     }
-                    /*#name {display:inline-block;margin-right:10px;}
-                    #email {display:inline-block;margin-right:10px;}
-                    #datetime {display:inline-block;margin-right:10px;} 
-                    #submit {display:inline-block;} */
+                    
+                    .us {
+                        background-color: lightgray;
+                        color: white;
+                        margin: 10px;
+                        padding: 30px;
+                        height: 250px;
+                        vertical-align: middle;
+                    }
                 </style>
                 <?php if (!empty($msg)) {
                     echo "<center><h3>$msg</h3></center>";
