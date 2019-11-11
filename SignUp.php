@@ -120,10 +120,11 @@
             <div id="Promo" class="tabcontent">
                 <div class="box">
                     <h3>Have a Promo? Enter it below!</h3>
-                    <input type="text" name="Promo" id="Promo"
-                           placeholder="Enter your Promo Code"/>
+
                     <form id="insert" name="insert" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                           method="POST">
+                        <input type="text" name="Promo" id="Promo"
+                               placeholder="Enter your Promo Code"/>
                     <li><input type="submit" value="Submit" /></li>
                     </form>
                 </div>
