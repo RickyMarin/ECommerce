@@ -52,7 +52,11 @@
 <div id="page-wrapper">
 
     <!-- Header -->
-    <?php include("header.php"); ?>
+    <?php include("header.php");
+    session_start();
+    if(isset($_SESSION['logged_in'])){
+        header("Location:Celebrities.List.php");
+    }?>
 
     <!-- Main -->
     <script>
