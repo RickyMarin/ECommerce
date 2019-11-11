@@ -56,13 +56,13 @@
                     h3{
                         color:blue;
                     }
-                    
+
                     .us {
                         background-color: lightgray;
                         color: white;
                         margin: 10px;
                         padding: 30px;
-                        height: 250px;
+                        height: 350px;
                         vertical-align: middle;
                     }
                 </style>
