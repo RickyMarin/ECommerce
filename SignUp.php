@@ -90,6 +90,7 @@
         <div class="tab">
             <button class="tablink" onclick="openPage(event,'What is')" id="defaultOpen">Premium Membership!</button>
             <button class="tablink" onclick="openPage(event,'Who')">Basic Membership</button>
+            <button class="tablink" onclick="openPage(event,'Promo')">Have a Promo?</button>
             <div id="What is" class="tabcontent">
                     <div class="box">
                     <h3>Unlimited Plan!</h3>
@@ -113,6 +114,15 @@
                         <input type="hidden" name="data" value="qbAfM+webtfbPR6Y7T0S7Vv/43J9mXh5y4Rr9QO677BRYXpJpCGKrt7MAX+d4Ke99W/Txg2ZbUd9fl+L7qPShM6WlM6yMbQ0DVU/IJwgrcO+3c5HPzhER9nGEmF5vYuxDHyVvkjG7YW80QqKaDDPQqaN/tZQfdFdqBf0UGILVP9lCu7aPG2DIbsM7WuyxtQl" />
                         <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
                     </form>
+                </div>
+                <img src="thanks.jpeg" width="612" height="180" >
+            </div>
+            <div id="promo" class="tabcontent">
+                <div class="box">
+                    <h3>Have a Promo? Enter it below!</h3>
+                    <input type="text" name="Promo" id="Promo"
+                           placeholder="Enter your Promo Code"/>
+                    <li><input type="submit" value="Submit"/></li>
                 </div>
                 <img src="thanks.jpeg" width="612" height="180" >
             </div>
