@@ -125,8 +125,7 @@
                 <div class="box">
                     <h3>Have a Promo? Enter it below!</h3>
 
-                    <form id="insert" name="insert" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
-                          method="POST">
+                    <form id="insert" name="insert" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                         <input type="text" name="Promo" id="Promo"
                                placeholder="Enter your Promo Code"/>
                     <li><input type="submit" value="Submit" /></li>
@@ -138,6 +137,9 @@
 
     <?php
     session_start();
+    if(isset($_POST['Promo'])){
+        header('location:index.php');
+    }
     if ($_POST['Promo']=="test123"){
         $_SESSION['Promo']=true;
         header('location:SignUpPromo.php');
