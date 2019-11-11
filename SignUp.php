@@ -136,6 +136,7 @@
     session_start();
     if ($_POST['Promo']=="test123"){
         $_SESSION["Promo"]=true;
+        header('location:SignUpPromo.php');
     }
     else{
         echo"Invalid Promo Code";
