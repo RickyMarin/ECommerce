@@ -117,7 +117,7 @@
                 </div>
                 <img src="thanks.jpeg" width="612" height="180" >
             </div>
-            <div id="promo" class="tabcontent">
+            <div id="Promo" class="tabcontent">
                 <div class="box">
                     <h3>Have a Promo? Enter it below!</h3>
                     <input type="text" name="Promo" id="Promo"
