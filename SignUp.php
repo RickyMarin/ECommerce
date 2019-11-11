@@ -128,7 +128,15 @@
             </div>
     </section>
 
-
+    <?php
+    session_start();
+    if ($_POST['Promo']=="test123"){
+        $_SESSION["Promo"]=true;
+    }
+    else{
+        echo"Invalid Promo Code";
+    }
+    ?>
     <!-- Footer -->
     <?php include("footer.php"); ?>
 

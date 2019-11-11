@@ -54,7 +54,7 @@
     <!-- Header -->
     <?php include("header.php");
     session_start();
-    if(!isset($_SESSION['promo'])){
+    if(!isset($_SESSION['Promo'])){
         header('Location:SignUp.php');
     }
 
