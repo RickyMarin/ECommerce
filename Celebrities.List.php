@@ -185,7 +185,7 @@
                     </form>
                 </div>
                 <div class="us">
-                    <img src="Alfred Weaver.jpg" alt="Alfred Weaver" width="180" height="180" align="left" style="margin-right:10px">
+                    <img src="Alfred Weaver.jpeg" alt="Alfred Weaver" width="180" height="180" align="left" style="margin-right:10px">
 					<h3 style="text-align:left">Alf Weaver</h3>
 					<h4 style="text-align:left">Professor</h4>
 					<p style="text-align:left; color:black">Alf Weaver received his Ph.D. in Computer Science from the University of Illinois in 1976. He joined the University of Virginia in 1977 and is now Professor of Computer Science, Chair of the UVA Faculty Senate, and Founding Director of UVA’s Applied Research Institute.</p>
